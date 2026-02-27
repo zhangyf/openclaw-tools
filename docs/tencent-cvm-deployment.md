@@ -470,6 +470,29 @@ export $(cat ~/.openclaw/workspace/.env | xargs) && node ~/.openclaw/workspace/s
 
 ---
 
-**文档版本：** v1.1（实际经验版）  
+## 附录
+
+### Telegram Bot 配置参考
+
+> OpenClaw 连接 Telegram Bot 的详细配置，可参考腾讯云开发者社区文章：
+> **《玩转OpenClaw｜云上OpenClaw(Clawdbot)快速接入Telegram指南》**
+> https://cloud.tencent.com/developer/article/2626214
+
+该文章涵盖：
+- Telegram Bot 创建与配置
+- Webhook 模式设置
+- 腾讯云轻量服务器部署
+- 常见问题排查
+
+### 相关链接
+
+- OpenClaw 官方文档：https://docs.openclaw.ai
+- OpenClaw GitHub：https://github.com/openclaw/openclaw
+- 腾讯云 CVM 文档：https://cloud.tencent.com/document/product/213
+- 腾讯云开发者社区 OpenClaw 专栏：https://cloud.tencent.com/developer/column/96998
+
+---
+
+**文档版本：** v1.2（实际经验版）  
 **最后更新：** 2026-02-27  
 **适用环境：** 腾讯云SA5.MEDIUM4 | Ubuntu 24.04 LTS
