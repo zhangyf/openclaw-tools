@@ -128,6 +128,50 @@ openclaw gateway restart
 
 ---
 
+### 问题2：群聊中只有我能@机器人，其他人@无响应
+
+**场景：** Telegram群聊中，只有我@机器人时它有响应，群里其他人@它时没有响应
+
+**现象：**
+- 我自己@机器人 → 正常响应
+- 其他人@机器人 → 无响应
+- 私聊机器人 → 正常
+
+**原因：**
+配置了 `groupPolicy: "allowlist"` 且 `allowFrom` 只包含了自己的用户ID，导致只有白名单内的用户能触发机器人
+
+**解决方案：**
+
+将 `groupPolicy` 从 `"allowlist"` 改为 `"open"`：
+
+```json
+{
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "botToken": "YOUR_BOT_TOKEN",
+      "groupPolicy": "open",
+      "groups": {
+        "*": {
+          "requireMention": true
+        }
+      }
+    }
+  }
+}
+```
+
+**配置说明：**
+- `groupPolicy: "open"`：对所有人开放，不限制用户
+- `groupPolicy: "allowlist"`：仅允许 `allowFrom` 列表中的用户
+
+**重启生效：**
+```bash
+openclaw gateway restart
+```
+
+---
+
 ## 附录
 
 ### Telegram Bot 配置参考
