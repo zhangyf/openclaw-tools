@@ -79,23 +79,7 @@ vim ~/.openclaw/config.json
 
 ## 问题记录与解决方案
 
-### 问题1：跨平台/远程操作的便利性
-
-**场景：** 需要在不同场景下与OpenClaw交互
-
-**解决方案：**
-
-1. **Telegram Bot（推荐用于移动端）**
-   - 配置Telegram Channel
-   - 随时随地通过Telegram与执事对话
-
-2. **保留本地配置文件**
-   - 个人配置（USER.md, MEMORY.md等）保留在服务器本地
-   - 通过SSH/VS Code Remote编辑
-
----
-
-### 问题2：systemd user services 不可用
+### 问题1：systemd user services 不可用
 
 **场景：** 执行 `openclaw gateway install` 安装系统服务时失败
 
@@ -149,7 +133,49 @@ journalctl --user -u openclaw -f
 
 ---
 
-### 问题3：Telegram群聊中机器人无法接收@消息
+### 问题2：Telegram群聊中机器人无法接收@消息
+
+**场景：** OpenClaw机器人加入Telegram群聊后，群里@机器人的消息收不到
+
+**现象：**
+- 私聊机器人正常
+- 群聊中@机器人无响应
+- 日志中看不到群消息
+
+**原因：**
+OpenClaw默认配置下，群聊消息处理策略需要显式配置
+
+**解决方案：**
+
+在 `~/.openclaw/config.json` 中添加群聊配置：
+
+```json
+{
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "botToken": "YOUR_BOT_TOKEN",
+      "groups": {
+        "*": {
+          "requireMention": true
+        }
+      }
+    }
+  }
+}
+```
+
+**配置说明：**
+- `groups`: 群聊配置对象
+- `"*"`: 通配符，表示应用于所有群聊
+- `requireMention: true`: 需要被@提及才响应
+
+**重启生效：**
+```bash
+openclaw gateway restart
+```
+
+**参考配置来源：** 腾讯云开发者社区文章 - https://cloud.tencent.com/developer/article/2626214
 
 **场景：** OpenClaw机器人加入Telegram群聊后，群里@机器人的消息收不到
 
