@@ -78,7 +78,61 @@ vim ~/.openclaw/config.json
 
 ## 问题记录与解决方案
 
-### 问题1：Telegram群聊中机器人无法接收@消息
+### 问题1：systemd user services are unavailable
+
+**场景：** 执行 `openclaw gateway install` 安装系统服务时失败
+
+**现象：**
+```
+Error: systemd user services are unavailable
+# 或
+Failed to connect to bus: No such file or directory
+```
+
+**原因：**
+- 用户未启用 linger 模式（允许用户退出登录后继续运行服务）
+- XDG_RUNTIME_DIR 环境变量未正确设置
+
+**解决方案：**
+
+按顺序执行以下命令：
+
+```bash
+# 1. 启用用户的 linger 模式
+sudo loginctl enable-linger $(whoami)
+
+# 2. 设置运行时目录环境变量
+export XDG_RUNTIME_DIR=/run/user/$(id -u)
+
+# 3. 重新安装 OpenClaw 服务
+openclaw gateway install --force
+
+# 4. 启动服务
+openclaw gateway start
+```
+
+**持久化配置：**
+
+将环境变量添加到 `~/.bashrc` 避免每次手动设置：
+
+```bash
+echo 'export XDG_RUNTIME_DIR=/run/user/$(id -u)' >> ~/.bashrc
+source ~/.bashrc
+```
+
+**验证修复：**
+
+```bash
+# 检查服务状态
+systemctl --user status openclaw
+
+# 查看日志
+journalctl --user -u openclaw -f
+```
+
+---
+
+### 问题2：Telegram群聊中机器人无法接收@消息
 
 **场景：** OpenClaw机器人加入Telegram群聊后，群里@机器人的消息收不到
 
@@ -128,7 +182,7 @@ openclaw gateway restart
 
 ---
 
-### 问题2：群聊中只有我能@机器人，其他人@无响应
+### 问题3：群聊中只有我能@机器人，其他人@无响应
 
 **场景：** Telegram群聊中，只有我@机器人时它有响应，群里其他人@它时没有响应
 
