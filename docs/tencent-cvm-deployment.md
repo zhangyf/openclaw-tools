@@ -79,176 +79,7 @@ vim ~/.openclaw/config.json
 
 ## 问题记录与解决方案
 
-### 问题1：GitHub连接与代码仓库设置
-
-**场景：** 需要将代码推送到GitHub仓库
-
-**遇到的子问题：**
-- GitHub CLI安装需要sudo权限，但个人账户没有
-- 直接下载二进制文件到 `~/.local/bin` 解决
-
-**解决方案：**
-```bash
-# 手动安装GitHub CLI（无需sudo）
-mkdir -p ~/.local/bin
-cd /tmp
-curl -fsSL https://github.com/cli/cli/releases/download/v2.67.0/gh_2.67.0_linux_amd64.tar.gz -o gh.tar.gz
-tar -xzf gh.tar.gz
-mv gh_2.67.0_linux_amd64/bin/gh ~/.local/bin/
-
-# 添加到PATH
-echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
-source ~/.bashrc
-
-# 验证
-git --version
-gh --version
-```
-
----
-
-### 问题2：GitHub推送时的密钥泄露检测
-
-**现象：**
-```
-remote: error: GH013: Repository rule violations found for refs/heads/main.
-remote: - GITHUB PUSH PROTECTION
-remote: - Push cannot contain secrets
-remote: - Tencent Cloud Secret ID detected
-```
-
-**原因：**
-代码中硬编码了腾讯云COS的SecretId和SecretKey，被GitHub安全扫描拦截。
-
-**解决方案：**
-
-1. **立即修改密钥（腾讯云控制台）**
-   - 登录腾讯云控制台 → 访问管理 → API密钥管理
-   - 删除或禁用已泄露的密钥
-   - 创建新的API密钥
-
-2. **修改代码使用环境变量**
-
-```javascript
-// 修改前（错误）
-const config = {
-    SecretId: 'YOUR_SECRET_ID_HERE',
-    SecretKey: 'YOUR_SECRET_KEY_HERE'
-};
-
-// 修改后（正确）
-const config = {
-    SecretId: process.env.TENCENT_COS_SECRET_ID,
-    SecretKey: process.env.TENCENT_COS_SECRET_KEY
-};
-
-if (!config.SecretId || !config.SecretKey) {
-    console.error('错误: 请设置环境变量 TENCENT_COS_SECRET_ID 和 TENCENT_COS_SECRET_KEY');
-    process.exit(1);
-}
-```
-
-3. **创建.env文件并加入.gitignore**
-
-```bash
-# 创建.env文件
-cat > ~/.openclaw/workspace/.env << 'EOF'
-TENCENT_COS_SECRET_ID=你的新SecretId
-TENCENT_COS_SECRET_KEY=你的新SecretKey
-EOF
-
-# 加入.gitignore
-echo '.env' >> ~/.gitignore
-```
-
-4. **清除Git历史中的敏感信息**
-
-```bash
-cd ~/.openclaw/workspace
-
-# 方法：重新初始化git（最彻底）
-rm -rf .git
-git init
-git config user.name "your-username"
-git config user.email "your-email@example.com"
-git remote add origin https://github.com/username/repo.git
-git add .
-git commit -m "Initial commit: clean version without secrets"
-git push -f origin main
-```
-
----
-
-### 问题3：定时任务的环境变量加载
-
-**场景：** 配置每日自动备份COS的cron任务
-
-**问题：** cron任务执行时无法读取.env文件中的环境变量
-
-**解决方案：**
-
-**方法1 - 在cron命令中加载环境变量：**
-
-```bash
-# 编辑crontab
-crontab -e
-
-# 添加任务（加载.env后执行）
-59 23 * * * export $(cat /home/username/.openclaw/workspace/.env | xargs) && node /home/username/.openclaw/workspace/scripts/backup-to-cos.js
-```
-
-**方法2 - 使用OpenClaw内置cron（推荐）：**
-
-```bash
-# OpenClaw的cron任务可以配置前置环境加载
-# 参考OpenClaw文档配置定时任务
-```
-
----
-
-### 问题4：个人配置文件的处理
-
-**场景：** 工作目录中有包含个人信息的.md文件（SOUL.md, USER.md, MEMORY.md等）
-
-**问题：** 这些文件包含个人偏好、记忆、身份信息，不应提交到GitHub
-
-**解决方案：**
-
-```bash
-# 更新.gitignore
-cat >> ~/.openclaw/workspace/.gitignore << 'EOF'
-
-# 个人配置和敏感信息（不提交到GitHub）
-AGENTS.md
-IDENTITY.md
-MEMORY.md
-SOUL.md
-TOOLS.md
-USER.md
-HEARTBEAT.md
-
-# 记忆文件（包含个人对话历史）
-memory/
-
-# 工作区状态
-.openclaw/
-
-# 环境变量
-.env
-EOF
-
-# 从git历史中移除这些文件
-git rm -r --cached AGENTS.md IDENTITY.md MEMORY.md SOUL.md TOOLS.md USER.md HEARTBEAT.md memory/ .openclaw/ 2>/dev/null
-
-# 提交更改
-git add .gitignore
-git commit -m "security: exclude personal config files from git"
-git push origin main
-```
-
----
-
-### 问题5：跨平台/远程操作的便利性
+### 问题1：跨平台/远程操作的便利性
 
 **场景：** 需要在不同场景下与OpenClaw交互
 
@@ -264,7 +95,7 @@ git push origin main
 
 ---
 
-### 问题6：systemd user services 不可用
+### 问题2：systemd user services 不可用
 
 **场景：** 执行 `openclaw gateway install` 安装系统服务时失败
 
@@ -318,7 +149,7 @@ journalctl --user -u openclaw -f
 
 ---
 
-### 问题7：Telegram群聊中机器人无法接收@消息
+### 问题3：Telegram群聊中机器人无法接收@消息
 
 **场景：** OpenClaw机器人加入Telegram群聊后，群里@机器人的消息收不到
 
