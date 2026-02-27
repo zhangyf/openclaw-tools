@@ -100,6 +100,10 @@ OpenClaw默认配置下，群聊消息处理策略需要显式配置
     "telegram": {
       "enabled": true,
       "botToken": "YOUR_BOT_TOKEN",
+      "allowFrom": [
+        USER_ID_NUMBERIC
+      ],
+      "groupPolicy": "allowlist",
       "groups": {
         "*": {
           "requireMention": true
