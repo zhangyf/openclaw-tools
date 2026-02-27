@@ -1,1 +1,19 @@
 .env
+
+# 个人配置和敏感信息（不提交到GitHub）
+AGENTS.md
+IDENTITY.md
+MEMORY.md
+SOUL.md
+TOOLS.md
+USER.md
+HEARTBEAT.md
+
+# 记忆文件（包含个人对话历史）
+memory/
+
+# 工作区状态
+.openclaw/
+
+# 依赖目录
+node_modules/
