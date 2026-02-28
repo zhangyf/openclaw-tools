@@ -9,6 +9,32 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+// 自动加载.env文件（如果环境变量未设置）
+function loadEnv() {
+    if (process.env.TENCENT_COS_SECRET_ID && process.env.TENCENT_COS_SECRET_KEY) {
+        return; // 环境变量已存在，无需加载
+    }
+    
+    const envPath = path.join(process.env.HOME, '.openclaw/workspace/.env');
+    if (fs.existsSync(envPath)) {
+        const envContent = fs.readFileSync(envPath, 'utf8');
+        envContent.split('\n').forEach(line => {
+            const match = line.match(/^([^#=]+)=(.*)$/);
+            if (match) {
+                const key = match[1].trim();
+                const value = match[2].trim();
+                if (!process.env[key]) {
+                    process.env[key] = value;
+                }
+            }
+        });
+        console.log(`[${new Date().toISOString()}] 已从.env文件加载环境变量`);
+    }
+}
+
+// 加载环境变量
+loadEnv();
+
 // COS配置 - 从环境变量读取密钥
 const config = {
     Bucket: 'openclaw-bakup-1251036673',
@@ -18,7 +44,8 @@ const config = {
 };
 
 if (!config.SecretId || !config.SecretKey) {
-    console.error('错误: 请设置环境变量 TENCENT_COS_SECRET_ID 和 TENCENT_COS_SECRET_KEY');
+    console.error(`[${new Date().toISOString()}] 错误: 请设置环境变量 TENCENT_COS_SECRET_ID 和 TENCENT_COS_SECRET_KEY`);
+    console.error(`[${new Date().toISOString()}] 提示: 检查 ~/.openclaw/workspace/.env 文件是否存在且包含正确的密钥`);
     process.exit(1);
 }
 
