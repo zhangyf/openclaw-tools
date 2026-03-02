@@ -9,6 +9,7 @@ import (
 	"log"
 	"os"
 	"os/exec"
+	"path/filepath"
 	"strings"
 	"time"
 )
@@ -116,14 +117,35 @@ func main() {
 		log.Println("✅ 简报消息发送成功")
 	}
 	
-	// 5. 发送详细版文件
-	log.Println("📎 发送详细版文件...")
+	// 5. 将Markdown转换为文本文件（Telegram可以直接预览.txt文件）
+	log.Println("📝 转换Markdown为文本文件...")
 	
-	// 构建文件发送命令（不使用caption参数）
+	txtFilePath := strings.Replace(filePath, ".md", ".txt", 1)
+	
+	// 读取Markdown内容
+	content, err := os.ReadFile(filePath)
+	if err != nil {
+		log.Printf("读取文件失败: %v", err)
+		// 如果读取失败，还是尝试发送原文件
+		txtFilePath = filePath
+	} else {
+		// 保存为文本文件
+		if err := os.WriteFile(txtFilePath, content, 0644); err != nil {
+			log.Printf("保存文本文件失败: %v", err)
+			txtFilePath = filePath
+		} else {
+			log.Printf("✅ 已转换为文本文件: %s", txtFilePath)
+		}
+	}
+	
+	// 6. 发送文本文件
+	log.Println("📎 发送详细版文件（文本格式）...")
+	
+	// 构建文件发送命令
 	fileCmd := exec.Command("openclaw", "message", "send",
 		"--channel", "telegram",
 		"--target", chatID,
-		"--media", filePath)
+		"--media", txtFilePath)
 	
 	if output, err := fileCmd.CombinedOutput(); err != nil {
 		log.Printf("发送文件失败: %v, 输出: %s", err, output)
@@ -132,8 +154,9 @@ func main() {
 		log.Println("🔄 尝试替代方案：先发送说明消息，再发送文件...")
 		
 		// 发送说明消息
-		fileInfoMsg := fmt.Sprintf("📎 **详细版文件已发送**\n📁 文件名: %s\n⏰ 生成时间: %s\n\n点击下方文件查看完整分析", 
-			latestFile, now.Format("15:04"))
+		fileName := filepath.Base(txtFilePath)
+		fileInfoMsg := fmt.Sprintf("📎 **详细版文件已发送**\n📁 文件名: %s\n⏰ 生成时间: %s\n\n点击下方文件查看完整分析（Telegram内直接预览）", 
+			fileName, now.Format("15:04"))
 		
 		infoCmd := exec.Command("openclaw", "message", "send",
 			"--channel", "telegram",
@@ -157,10 +180,23 @@ func main() {
 	log.Println("")
 	log.Println("🎯 用户体验:")
 	log.Println("   1. 在群聊中看到简报摘要")
-	log.Println("   2. 下方就是详细版文件")
-	log.Println("   3. 点击文件直接预览")
-	log.Println("   4. 无需离开Telegram")
+	log.Println("   2. 下方就是详细版文件（.txt格式）")
+	log.Println("   3. 点击文件直接在Telegram内预览")
+	log.Println("   4. 无需跳转到其他应用")
+	log.Println("")
+	log.Println("📋 文件格式说明:")
+	log.Println("   • .md → 需要跳转到其他应用")
+	log.Println("   • .txt → Telegram内直接预览")
+	log.Println("   • 内容完全相同，只是扩展名不同")
 	log.Println("")
 	log.Println("🚀 部署: 更新cron job使用此脚本即可")
+	
+	// 清理临时文本文件（如果是新创建的）
+	if txtFilePath != filePath && strings.HasSuffix(txtFilePath, ".txt") {
+		if err := os.Remove(txtFilePath); err == nil {
+			log.Printf("🧹 清理临时文件: %s", txtFilePath)
+		}
+	}
+	
 	os.Exit(0)
 }
