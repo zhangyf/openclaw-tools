@@ -6,7 +6,7 @@ scripts/war-briefing-go
 # 忽略备份文件
 backup-reports/
 token-reports/
-briefings/
+# briefings/  # 注释掉，允许推送到GitHub
 
 # 忽略任务文件
 tasks/
@@ -47,3 +47,4 @@ go/bin/
 !WORKFLOW_AUTO.md
 !README.md
 !DEPLOYMENT.md
+!briefings/war-briefing-detailed-*.md  # 允许战争简报文件
