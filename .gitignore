@@ -45,3 +45,5 @@ go/bin/
 # 忽略个人笔记文件（中文文件名）
 *.md
 !WORKFLOW_AUTO.md
+!README.md
+!DEPLOYMENT.md
