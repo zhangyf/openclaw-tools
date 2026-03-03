@@ -48,3 +48,4 @@ go/bin/
 !README.md
 !DEPLOYMENT.md
 !briefings/war-briefing-detailed-*.md  # 允许战争简报文件
+!briefings/test-*.md                   # 允许测试文件
