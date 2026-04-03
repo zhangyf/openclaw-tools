@@ -14,6 +14,7 @@ tasks/
 # 忽略技能目录（可能包含敏感信息）
 skills/
 !.openclaw/workspace/skills/openclaw-tavily-search/
+!.openclaw/workspace/skills/weekly-client-updates/
 
 # 忽略环境变量文件
 .env

@@ -1,0 +1,32 @@
+# 二进制文件
+weekly-client-update
+dist/
+*.exe
+
+# 客户数据和生成的文件
+weekly-updates/
+*.md # 排除客户更新文件，但保留README.md和SKILL.md
+!README.md
+!SKILL.md
+
+# Go编译输出
+*.test
+*.out
+*.prof
+
+# 环境配置和敏感信息
+.env
+.env.local
+.env.*
+secrets.*
+
+# 开发环境文件
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
