@@ -35,7 +35,7 @@ export WEEKLY_CLIENT_UPDATE_COS_PATH="weekly-updates/"  # COS上传路径
 #### 添加单个客户更新
 ```bash
 ./weekly-client-update \
-  --client "好未来" \
+  --client "客户A" \
   --content "本周启动了内容审核项目，目前供应商五选二，项目金额一年超百万，正在进行第一轮测评..." \
   --bucket "你的存储桶名称"
 ```
@@ -63,7 +63,7 @@ export WEEKLY_CLIENT_UPDATE_COS_PATH="weekly-updates/"  # COS上传路径
 
 | 参数 | 必填 | 说明 | 示例 |
 |------|------|------|------|
-| `--client` | 是* | 客户名称 | `--client "好未来"` |
+| `--client` | 是* | 客户名称 | `--client "客户A"` |
 | `--content` | 是* | 更新内容 | `--content "项目进展..."` |
 | `--clients` | 是* | 多个客户JSON | `--clients '[{"name":"A","content":"..."}]'` |
 | `--bucket` | 是 | COS桶名称 | `--bucket "my-bucket"` |
@@ -151,13 +151,15 @@ weekly-updates/
 
 > 最后更新: 2026-04-03 15:30:45
 
-## 好未来
-好未来客户本周正式启动了内容审核项目...
+## 客户A
+客户A本周正式启动了新的技术项目，目前处于需求分析和方案设计阶段...
 
-> **原始记录**: 本周启动了内容审核项目...
+> **原始记录**: 本周正式启动了新的技术项目
 
 ## 客户B
-客户B的项目进展顺利...
+客户B的项目进展顺利，已完成初步测试，正在进行性能优化...
+
+> **原始记录**: 项目进展顺利，已完成初步测试
 
 ---
 
