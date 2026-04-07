@@ -29,4 +29,5 @@ type COSClient interface {
 	DownloadFile(ctx context.Context, key string) ([]byte, error)
 	UploadFile(ctx context.Context, key string, data []byte) error
 	FileExists(ctx context.Context, key string) (bool, error)
+	ListFiles(ctx context.Context, prefix string) ([]string, error)
 }
