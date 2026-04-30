@@ -14,14 +14,8 @@ type ClientUpdate struct {
 type WeeklyReport struct {
 	Year     int                 `json:"year"`
 	Week     int                 `json:"week"`
-	Clients  map[string]string   `json:"clients"`   // 客户名 -> 润色后的内容
-	RawData  map[string][]string `json:"raw_data"`  // 客户名 -> 原始内容列表（用于审计）
+	Clients  map[string]string   `json:"clients"`   // 客户名 -> 原始内容
 	FilePath string              `json:"file_path"`
-}
-
-// TextPolisher 文本润色器接口
-type TextPolisher interface {
-	Polish(text string, targetLength int) (string, error)
 }
 
 // COSClient COS客户端接口
