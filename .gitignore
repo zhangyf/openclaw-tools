@@ -2,6 +2,13 @@
 scripts/*-go
 scripts/war-briefing-detailed
 scripts/war-briefing-go
+fortune-bot
+daily-fortune
+sizhu
+url_crawler
+hello
+# 忽略临时运势文件
+fortune_*.txt
 
 # 忽略备份文件
 backup-reports/
