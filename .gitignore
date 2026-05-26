@@ -4,6 +4,8 @@ scripts/war-briefing-detailed
 scripts/war-briefing-go
 fortune-bot
 daily-fortune
+cos_upload
+cos_presign
 sizhu
 url_crawler
 hello

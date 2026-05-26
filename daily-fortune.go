@@ -1,42 +1,43 @@
 // Daily Fortune — 每日运势生成 + 三択占い + COS归档 + 预签名URL
 // 用法：
-//   go run daily-fortune.go                       → 今天的运势（默认生日1990-06-15 JST）
-//   go run daily-fortune.go 1984 10 17             → 指定生日的今日运势
+//   daily-fortune                        → 今天的运势（默认生日1990-06-15 JST）
+//   daily-fortune 1984 10 17             → 指定生日的今日运势
 // 输出：
 //   1. 详细运势 + 三択占い 合并文本 → 上传COS
 //   2. 打印预签名URL（1小时有效）
+//
+// 依赖：DEEPSEEK_API_KEY + TENCENT_COS_SECRET_{ID,KEY}
 
 package main
 
 import (
 	"bytes"
+	"context"
 	"encoding/json"
 	"fmt"
 	"io"
 	"net/http"
+	"net/url"
 	"os"
 	"os/exec"
 	"path/filepath"
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/tencentyun/cos-go-sdk-v5"
 )
 
 // ============================================================
 // 配置
 // ============================================================
 
-const apiEndpoint = "https://api.deepseek.com/chat/completions"
-
-var (
-	bucket   = "openclaw-backup-tx-1251036673"
-	region   = "ap-beijing"
-	cosDir   string // fortune/YYYY/MM
-	cosPath  string // fortune/YYYY/MM/YYYY-MM-DD.txt
-	dateStr  string // YYYY-MM-DD
-	dateJP   string // M/D(火)形式
-	targetDate time.Time
+const (
+	apiEndpoint = "https://api.deepseek.com/chat/completions"
+	bucketURL   = "https://openclaw-backup-tx-1251036673.cos.ap-beijing.myqcloud.com"
 )
+
+var targetDate time.Time
 
 // ============================================================
 // DeepSeek API
@@ -61,12 +62,11 @@ type chatResp struct {
 	} `json:"error,omitempty"`
 }
 
+// getDeepSeekKey 从环境变量或 OpenClaw 配置获取 DeepSeek API Key
 func getDeepSeekKey() string {
-	// 优先环境变量，其次从 OpenClaw 配置文件读取
 	if k := os.Getenv("DEEPSEEK_API_KEY"); k != "" {
 		return k
 	}
-	// 从 openclaw.json 读取
 	cfgPath := filepath.Join(os.Getenv("HOME"), ".openclaw", "openclaw.json")
 	data, err := os.ReadFile(cfgPath)
 	if err != nil {
@@ -82,15 +82,15 @@ func getDeepSeekKey() string {
 	if err := json.Unmarshal(data, &cfg); err != nil {
 		return ""
 	}
-	if p, ok := cfg.Models.Providers["deepseek"]; ok && p.ApiKey != "" {
-		return p.ApiKey
-	}
-	if p, ok := cfg.Models.Providers["deepseek-v4"]; ok && p.ApiKey != "" {
-		return p.ApiKey
+	for _, name := range []string{"deepseek", "deepseek-v4"} {
+		if p, ok := cfg.Models.Providers[name]; ok && p.ApiKey != "" {
+			return p.ApiKey
+		}
 	}
 	return ""
 }
 
+// askDeepSeek 调用 DeepSeek API 生成文本
 func askDeepSeek(system, user string) (string, error) {
 	key := getDeepSeekKey()
 	if key == "" {
@@ -98,10 +98,7 @@ func askDeepSeek(system, user string) (string, error) {
 	}
 	body, _ := json.Marshal(chatReq{
 		Model:       "deepseek-chat",
-		Messages:    []chatMsg{
-			{Role: "system", Content: system},
-			{Role: "user", Content: user},
-		},
+		Messages:    []chatMsg{{Role: "system", Content: system}, {Role: "user", Content: user}},
 		Temperature: 0.7,
 		MaxTokens:   800,
 	})
@@ -139,7 +136,6 @@ func weekDayJP(t time.Time) string {
 
 func generateDetailedFortune(birthYear, birthMonth, birthDay int) (string, error) {
 	dateStrJP := fmt.Sprintf("%d/%d(%s)", targetDate.Month(), targetDate.Day(), weekDayJP(targetDate))
-
 	prompt := fmt.Sprintf(`以下の情報で今日の四柱推命占いを作成してください。
 
 【ユーザー生年月日】%d年%d月%d日
@@ -160,7 +156,6 @@ func generateDetailedFortune(birthYear, birthMonth, birthDay int) (string, error
 
 #今日の運勢`,
 		birthYear, birthMonth, birthDay, dateStrJP, dateStrJP)
-
 	system := `あなたは人気占い系Xアカウント。毎日かわいくて親しみやすい運勢を発信。
 
 ルール：
@@ -170,7 +165,6 @@ func generateDetailedFortune(birthYear, birthMonth, birthDay int) (string, error
 4. ポジティブ中心。悪いことも柔らかく包む
 5. ラッキーカラー・ナンバー・方位は必ず入れる
 6. 最後に #今日の運勢 タグ`
-
 	return askDeepSeek(system, prompt)
 }
 
@@ -189,34 +183,54 @@ func generate3ChoiceTweet() string {
 }
 
 // ============================================================
-// COS上传（通过Python SDK）
+// COS操作（Go SDK）
 // ============================================================
 
-func cosUpload(content string) error {
-	scriptPath := filepath.Join(os.Getenv("HOME"), ".openclaw", "workspace", "cos-upload.py")
-	cmd := exec.Command("python3", scriptPath, cosPath)
-	cmd.Stdin = strings.NewReader(content)
-	cmd.Stderr = os.Stderr
-	out, err := cmd.Output()
+// getCOSClient 创建腾讯云COS客户端
+func getCOSClient() *cos.Client {
+	secretID := os.Getenv("TENCENT_COS_SECRET_ID")
+	secretKey := os.Getenv("TENCENT_COS_SECRET_KEY")
+	if secretID == "" || secretKey == "" {
+		fmt.Fprintln(os.Stderr, "错误: TENCENT_COS_SECRET_ID/KEY 未设置")
+		os.Exit(1)
+	}
+	u, _ := url.Parse(bucketURL)
+	b := &cos.BaseURL{BucketURL: u}
+	return cos.NewClient(b, &http.Client{
+		Transport: &cos.AuthorizationTransport{
+			SecretID:  secretID,
+			SecretKey: secretKey,
+		},
+	})
+}
+
+// cosUpload 上传内容到COS
+func cosUpload(client *cos.Client, content []byte, cosPath string) error {
+	_, err := client.Object.Put(context.Background(), cosPath, bytes.NewReader(content), nil)
 	if err != nil {
 		return fmt.Errorf("上传失败: %w", err)
 	}
-	fmt.Print(string(out))
+	fmt.Printf("  ☁️  已上传COS: openclaw-backup-tx-1251036673/%s\n", cosPath)
 	return nil
 }
 
-// ============================================================
-// 预签名URL生成（通过Python SDK）
-// ============================================================
-
-func generatePresignedURL(expireSeconds int) (string, error) {
-	scriptPath := filepath.Join(os.Getenv("HOME"), ".openclaw", "workspace", "cos-presign.py")
-	cmd := exec.Command("python3", scriptPath, cosPath, fmt.Sprintf("%d", expireSeconds))
-	output, err := cmd.Output()
+// generatePresignedURL 生成COS预签名下载URL（指定过期秒数）
+func generatePresignedURL(client *cos.Client, cosPath string, expireSeconds int) (string, error) {
+	secretID := os.Getenv("TENCENT_COS_SECRET_ID")
+	secretKey := os.Getenv("TENCENT_COS_SECRET_KEY")
+	presignedURL, err := client.Object.GetPresignedURL(
+		context.Background(),
+		http.MethodGet,
+		cosPath,
+		secretID,
+		secretKey,
+		time.Duration(expireSeconds)*time.Second,
+		nil,
+	)
 	if err != nil {
-		return "", fmt.Errorf("预签名URL生成失败: %w", err)
+		return "", fmt.Errorf("生成预签名URL失败: %w", err)
 	}
-	return strings.TrimSpace(string(output)), nil
+	return presignedURL.String(), nil
 }
 
 // ============================================================
@@ -228,23 +242,19 @@ func buildCombinedContent(detailed, tweet3 string) string {
 	var b strings.Builder
 	b.WriteString("========================================\n")
 	b.WriteString(fmt.Sprintf("  📅 %s\n", dateLabel))
-	b.WriteString(fmt.Sprintf("  🏷️  %s\n", cosPath))
+	b.WriteString(fmt.Sprintf("  🏷️  fortune/%s/%s.txt\n", targetDate.Format("2006/01"), targetDate.Format("2006-01-02")))
 	b.WriteString("========================================\n\n")
-
 	b.WriteString("【Part 1】🌸 今日の詳細運勢\n")
 	b.WriteString("──────────────────────────\n")
 	b.WriteString(detailed)
 	b.WriteString("\n\n")
-
 	b.WriteString("【Part 2】🎯 三択占い\n")
 	b.WriteString("──────────────────────────\n")
 	b.WriteString(tweet3)
 	b.WriteString("\n\n")
-
 	b.WriteString("========================================\n")
-	b.WriteString(fmt.Sprintf("  生成時刻: %s (JST)\n", time.Now().Format("2006-01-02 15:04:05")))
+	b.WriteString(fmt.Sprintf("  生成時刻: %s (CST)\n", time.Now().Format("2006-01-02 15:04:05")))
 	b.WriteString("========================================\n")
-
 	return b.String()
 }
 
@@ -256,7 +266,7 @@ func main() {
 	fmt.Println("🔮 每日运势生成 + 三択占い + COS归档")
 	fmt.Println(strings.Repeat("━", 40))
 
-	// 参数解析
+	// 参数解析：可指定生日（默认1990-06-15 JST）
 	birthYear, birthMonth, birthDay := 1990, 6, 15
 	if len(os.Args) >= 4 {
 		birthYear, _ = strconv.Atoi(os.Args[1])
@@ -264,16 +274,14 @@ func main() {
 		birthDay, _ = strconv.Atoi(os.Args[3])
 	}
 
-	// 目标日期（今天）
 	targetDate = time.Now()
-	dateStr = targetDate.Format("2006-01-02")
-	cosDir = targetDate.Format("fortune/2006/01")
-	cosPath = cosDir + "/" + targetDate.Format("2006-01-02") + ".txt"
-	dateJP = fmt.Sprintf("%d/%d(%s)", targetDate.Month(), targetDate.Day(), weekDayJP(targetDate))
+	dateStr := targetDate.Format("2006-01-02")
+	cosPath := fmt.Sprintf("fortune/%s/%s.txt", targetDate.Format("2006/01"), dateStr)
+	dateJP := fmt.Sprintf("%d/%d(%s)", targetDate.Month(), targetDate.Day(), weekDayJP(targetDate))
 
 	fmt.Printf("   生日: %d/%d/%d\n", birthYear, birthMonth, birthDay)
 	fmt.Printf("   対象: %s\n", dateJP)
-	fmt.Printf("   COS: %s/%s\n", bucket, cosPath)
+	fmt.Printf("   COS: openclaw-backup-tx-1251036673/%s\n", cosPath)
 	fmt.Println(strings.Repeat("━", 40))
 
 	// Step 1: 生成详细运势
@@ -288,24 +296,29 @@ func main() {
 	// Step 2: 生成三択占い
 	fmt.Print("  🎯 生成三択占い... ")
 	tweet3 := generate3ChoiceTweet()
-	fmt.Printf("✅\n")
+	fmt.Println("✅")
 
 	// Step 3: 合并内容
 	fmt.Print("  📦 合并内容... ")
 	combined := buildCombinedContent(detailed, tweet3)
 	fmt.Printf("✅ (%d文字)\n", len([]rune(combined)))
 
-	// Step 4: 上传COS
+	// Step 4: 初始化COS客户端
+	fmt.Print("  🔑 初始化COS... ")
+	client := getCOSClient()
+	fmt.Println("✅")
+
+	// Step 5: 上传COS
 	fmt.Print("  ☁️  上传COS... ")
-	if err := cosUpload(combined); err != nil {
+	if err := cosUpload(client, []byte(combined), cosPath); err != nil {
 		fmt.Printf("❌ %v\n", err)
 		os.Exit(1)
 	}
-	fmt.Print("  ✅ 上传完成\n")
+	fmt.Print("  ✅\n")
 
-	// Step 5: 生成预签名URL
+	// Step 6: 生成预签名URL
 	fmt.Print("  🔗 生成预签名URL... ")
-	presignedURL, err := generatePresignedURL(3600) // 1小时有效
+	presignedURL, err := generatePresignedURL(client, cosPath, 3600) // 1小时有效
 	if err != nil {
 		fmt.Printf("❌ %v\n", err)
 		os.Exit(1)
