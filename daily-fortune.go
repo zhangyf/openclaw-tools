@@ -234,10 +234,41 @@ func generatePresignedURL(client *cos.Client, cosPath string, expireSeconds int)
 }
 
 // ============================================================
+// 生成图提示词
+// ============================================================
+
+func generateImagePrompt(birthYear, birthMonth, birthDay int) (string, error) {
+	dateStrJP := fmt.Sprintf("%d/%d(%s)", targetDate.Month(), targetDate.Day(), weekDayJP(targetDate))
+	prompt := fmt.Sprintf(`あなたは日本の占い画像生成のプロンプトを作るアシスタントです。
+以下の情報をもとに、AI画像生成用の英語プロンプトを作成してください。
+
+【ユーザー生年月日】%d年%d月%d日
+【対象日】%s
+
+プロンプト要件：
+- 日本語の四柱推命（フォーチュンテリング）をテーマにした画像
+- 和風テイスト、かわいくて親しみやすい雰囲気
+- 星座・星・花・和柄などの装飾要素を含む
+- ラッキーカラーをアクセントカラーとして取り入れる
+- ソーシャルメディア（X/Twitter）投稿向け、900x900pxの正方形
+- テキストなし、グラフィックのみ
+- 出力は英語のプロンプト文のみ（100語以内）`, birthYear, birthMonth, birthDay, dateStrJP)
+
+	system := `あなたはプロの画像生成プロンプトライター。
+要件：
+1. 英語で100語以内
+2. 日本語占いテーマ、和風かわいい系
+3. 絵文字や特殊文字は使わない
+4. プロンプトのみを出力、説明不要
+5. Midjourney / DALL-E / Stable Diffusion いずれでも使える汎用的な形式`
+	return askDeepSeek(system, prompt)
+}
+
+// ============================================================
 // 合并内容
 // ============================================================
 
-func buildCombinedContent(detailed, tweet3 string) string {
+func buildCombinedContent(detailed, tweet3, imgPrompt string) string {
 	dateLabel := fmt.Sprintf("%s（%s）", targetDate.Format("2006年1月2日"), weekDayJP(targetDate))
 	var b strings.Builder
 	b.WriteString("========================================\n")
@@ -251,6 +282,10 @@ func buildCombinedContent(detailed, tweet3 string) string {
 	b.WriteString("【Part 2】🎯 三択占い\n")
 	b.WriteString("──────────────────────────\n")
 	b.WriteString(tweet3)
+	b.WriteString("\n\n")
+	b.WriteString("【Part 3】🎨 生図プロンプト（画像生成用）\n")
+	b.WriteString("──────────────────────────\n")
+	b.WriteString(imgPrompt)
 	b.WriteString("\n\n")
 	b.WriteString("========================================\n")
 	b.WriteString(fmt.Sprintf("  生成時刻: %s (CST)\n", time.Now().Format("2006-01-02 15:04:05")))
@@ -298,9 +333,19 @@ func main() {
 	tweet3 := generate3ChoiceTweet()
 	fmt.Println("✅")
 
+	// Step 2.5: 生成图提示词
+	fmt.Print("  🎨 生成图提示词... ")
+	imgPrompt, err := generateImagePrompt(birthYear, birthMonth, birthDay)
+	if err != nil {
+		fmt.Printf("⚠️  %v\n", err)
+		imgPrompt = "[生成失败]"
+	} else {
+		fmt.Println("✅")
+	}
+
 	// Step 3: 合并内容
 	fmt.Print("  📦 合并内容... ")
-	combined := buildCombinedContent(detailed, tweet3)
+	combined := buildCombinedContent(detailed, tweet3, imgPrompt)
 	fmt.Printf("✅ (%d文字)\n", len([]rune(combined)))
 
 	// Step 4: 初始化COS客户端
@@ -328,5 +373,8 @@ func main() {
 	fmt.Println(strings.Repeat("━", 40))
 	fmt.Println("\n  📎 预签名URL（1小时有效）:\n")
 	fmt.Printf("  %s\n\n", presignedURL)
+	fmt.Println(strings.Repeat("━", 40))
+	fmt.Println("\n  🎨 画像生成プロンプト（用于其他工具）:\n")
+	fmt.Printf("  %s\n\n", imgPrompt)
 	fmt.Println(strings.Repeat("━", 40))
 }
