@@ -237,31 +237,47 @@ func generatePresignedURL(client *cos.Client, cosPath string, expireSeconds int)
 // 生成图提示词
 // ============================================================
 
-func generateImagePrompt(birthYear, birthMonth, birthDay int) (string, error) {
+func generateImagePrompt(birthYear, birthMonth, birthDay int, fortuneText string) (string, error) {
 	dateStrJP := fmt.Sprintf("%d/%d(%s)", targetDate.Month(), targetDate.Day(), weekDayJP(targetDate))
-	prompt := fmt.Sprintf(`あなたは日本の占い画像生成のプロンプトを作るアシスタントです。
-以下の情報をもとに、AI画像生成用の英語プロンプトを作成してください。
+	// 用户喜欢的视觉风格 + 完整的文字内容
+	// 视觉风格参考：和服少女、桜、星、和柄、暖色背景、円形フレーム
+	promptText := fmt.Sprintf(`あなたは日本の占い画像生成のプロンプトを作るプロフェッショナルです。
+以下の情報をもとにAI画像生成用の英語プロンプトを作成してください。
 
-【ユーザー生年月日】%d年%d月%d日
-【対象日】%s
+【視覚スタイル（このスタイルを維持）】
+- A cute Japanese fortune-telling illustration
+- Soft pastel color scheme (mint green and pink)
+- A gentle smiling anime-style girl in a yukata
+- Surrounded by cherry blossoms, stars, and subtle geometric washi patterns
+- Warm beige background with a circular framing element
+- Small sparkles, crescent moon, and a lucky cat charm
+- Decorative Japanese font for any text
+- Kawaii and friendly atmosphere
+- Square format 900x900px, social media style
 
-プロンプト要件：
-- 日本語の四柱推命（フォーチュンテリング）をテーマにした画像
-- 和風テイスト、かわいくて親しみやすい雰囲気
-- 星座・星・花・和柄などの装飾要素を含む
-- ラッキーカラーをアクセントカラーとして取り入れる
-- ソーシャルメディア（X/Twitter）投稿向け、900x900pxの正方形
-- テキストなし、グラフィックのみ
-- 出力は英語のプロンプト文のみ（100語以内）`, birthYear, birthMonth, birthDay, dateStrJP)
+【画像内に以下の日本語テキストをすべて表示（省略不可）】
+%s
 
-	system := `あなたはプロの画像生成プロンプトライター。
-要件：
-1. 英語で100語以内
-2. 日本語占いテーマ、和風かわいい系
-3. 絵文字や特殊文字は使わない
-4. プロンプトのみを出力、説明不要
-5. Midjourney / DALL-E / Stable Diffusion いずれでも使える汎用的な形式`
-	return askDeepSeek(system, prompt)
+【テキスト配置ガイド】
+- 上部: 日付と「今日の運勢」
+- 中央: 星評価と一言メッセージ
+- 左下: 仕事と恋愛の運勢
+- 右下: ラッキーカラー・ナンバー・方位
+- 下部: 引用メッセージ
+
+注意：上記のテキストは「装飾の一部として自然に溶け込ませる」のではなく、「装飾のある美しいカードレイアウトの一部として読みやすく配置」すること。`, dateStrJP, fortuneText)
+
+	system := `あなたはプロの画像生成プロンプト作成者。
+
+絶対要件：
+1. 出力は英語のプロンプト文のみ、200語以内
+2. 説明文や注釈は不要、プロンプトのみ
+3. 絵文字は使わない
+4. 指定された日本語テキストを画像内に「すべて」表示することをプロンプト内で明示的に列挙すること（「including the following Japanese text:...」の形でテキスト全体をそのまま記載）
+5. テキストは装飾的な和風フォントで、背景の和服少女・桜・和柄などの装飾と調和させること
+6. テキストの配置は上部・中央・左下・右下・下部に自然にレイアウト
+7. 全体のトーンは「可愛い和風占いカード」`
+	return askDeepSeek(system, promptText)
 }
 
 // ============================================================
@@ -335,7 +351,7 @@ func main() {
 
 	// Step 2.5: 生成图提示词
 	fmt.Print("  🎨 生成图提示词... ")
-	imgPrompt, err := generateImagePrompt(birthYear, birthMonth, birthDay)
+	imgPrompt, err := generateImagePrompt(birthYear, birthMonth, birthDay, detailed)
 	if err != nil {
 		fmt.Printf("⚠️  %v\n", err)
 		imgPrompt = "[生成失败]"
