@@ -165,10 +165,24 @@ type Sentence struct {
 	Status             string `json:"status"`
 }
 
+// DailyStat 每日统计数据快照
+type DailyStat struct {
+	Date             string `json:"date"`              // YYYY-MM-DD
+	TotalWords       int    `json:"total_words"`
+	GreenCount       int    `json:"green_count"`
+	YellowCount      int    `json:"yellow_count"`
+	RedCount         int    `json:"red_count"`
+	PendingCount     int    `json:"pending_count"`
+	CumulativeErrors int    `json:"cumulative_errors"`
+	WordsReviewed    int    `json:"words_reviewed"`
+	ErrorsToday      int    `json:"errors_today"`
+}
+
 // VocabDB 词汇数据库（本机持久化 + COS 同步）
 type VocabDB struct {
 	Words     []Word     `json:"words"`
 	Sentences []Sentence `json:"sentences"`
+	Stats     []DailyStat `json:"stats"`
 	Updated   string     `json:"updated"`
 }
 
@@ -286,7 +300,7 @@ func computeCategory(w Word) string {
 // Excel 生成
 // ============================================================
 
-func generateReviewExcel(cfg Config, items []DueItem, sentences []DueItem, outputPath string) error {
+func generateReviewExcel(cfg Config, items []DueItem, sentences []DueItem, stats []DailyStat, outputPath string) error {
 	f := excelize.NewFile()
 
 	// ---- 样式工厂 ----
@@ -461,6 +475,59 @@ func generateReviewExcel(cfg Config, items []DueItem, sentences []DueItem, outpu
 		f.SetColWidth(sheet, "F", "F", 24)
 	}
 
+	// ======== 7日趋势图（数据Sheet + 图表） ========
+	f.NewSheet("趋势图")
+	chartRow := 1
+	// 写统计表头
+	for ci, h := range []string{"日期", "已掌握🟢", "基本掌握🟡", "待巩固🔴", "累计答错"} {
+		f.SetCellValue("趋势图", fmt.Sprintf("%c%d", 'A'+ci, chartRow), h)
+		f.SetCellStyle("趋势图", fmt.Sprintf("%c%d", 'A'+ci, chartRow), fmt.Sprintf("%c%d", 'A'+ci, chartRow), headerS)
+	}
+	chartRow++
+	for i, s := range stats {
+		row := chartRow + i
+		f.SetCellValue("趋势图", fmt.Sprintf("A%d", row), s.Date)
+		f.SetCellValue("趋势图", fmt.Sprintf("B%d", row), s.GreenCount)
+		f.SetCellValue("趋势图", fmt.Sprintf("C%d", row), s.YellowCount)
+		f.SetCellValue("趋势图", fmt.Sprintf("D%d", row), s.RedCount)
+		f.SetCellValue("趋势图", fmt.Sprintf("E%d", row), s.CumulativeErrors)
+		for ci := 0; ci < 5; ci++ {
+			f.SetCellStyle("趋势图", fmt.Sprintf("%c%d", 'A'+ci, row), fmt.Sprintf("%c%d", 'A'+ci, row), dataS)
+		}
+	}
+
+	// 创建趋势图表
+	if len(stats) >= 2 {
+		err := f.AddChart("趋势图", "F1", &excelize.Chart{
+			Type: excelize.Line,
+			Series: []excelize.ChartSeries{
+				{
+					Name:       "趋势图!$B$1",
+					Categories: fmt.Sprintf("趋势图!$A$2:$A$%d", 1+len(stats)),
+					Values:     fmt.Sprintf("趋势图!$B$2:$B$%d", 1+len(stats)),
+				},
+				{
+					Name:       "趋势图!$C$1",
+					Categories: fmt.Sprintf("趋势图!$A$2:$A$%d", 1+len(stats)),
+					Values:     fmt.Sprintf("趋势图!$C$2:$C$%d", 1+len(stats)),
+				},
+				{
+					Name:       "趋势图!$D$1",
+					Categories: fmt.Sprintf("趋势图!$A$2:$A$%d", 1+len(stats)),
+					Values:     fmt.Sprintf("趋势图!$D$2:$D$%d", 1+len(stats)),
+				},
+			},
+			Title: []excelize.RichTextRun{{Text: "7日学习趋势"}},
+			Dimension: excelize.ChartDimension{
+				Width:  15,
+				Height: 8,
+			},
+		})
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "  ⚠️  创建图表失败: %v\n", err)
+		}
+	}
+
 	return f.SaveAs(outputPath)
 }
 
@@ -472,6 +539,74 @@ func filterBy(items []DueItem, cat string) []DueItem {
 		}
 	}
 	return out
+}
+
+// ============================================================
+// 统计
+// ============================================================
+
+// computeStats 对当前数据库生成一条日统计快照
+func computeStats(db *VocabDB, reviewedToday, errorsToday int) DailyStat {
+	g, y, r, p, cumErr := 0, 0, 0, 0, 0
+	for _, w := range db.Words {
+		cumErr += w.ErrorCount
+		switch w.Status {
+		case "green":
+			g++
+		case "yellow":
+			y++
+		case "red":
+			r++
+		case "pending":
+			p++
+		}
+	}
+	return DailyStat{
+		Date:             time.Now().Format("2006-01-02"),
+		TotalWords:       len(db.Words),
+		GreenCount:       g,
+		YellowCount:      y,
+		RedCount:         r,
+		PendingCount:     p,
+		CumulativeErrors: cumErr,
+		WordsReviewed:    reviewedToday,
+		ErrorsToday:      errorsToday,
+	}
+}
+
+// statsDiff 生成今日 vs 昨日的对比文字
+func statsDiff(latest, prev DailyStat) string {
+	if prev.Date == "" {
+		return "暂无昨日对比数据"
+	}
+	greenDiff := latest.GreenCount - prev.GreenCount
+	yellowDiff := latest.YellowCount - prev.YellowCount
+	redDiff := latest.RedCount - prev.RedCount
+	errDiff := latest.CumulativeErrors - prev.CumulativeErrors
+
+	fn := func(diff int, suffix string) string {
+		if diff > 0 {
+			return fmt.Sprintf("+%d%s", diff, suffix)
+		} else if diff < 0 {
+			return fmt.Sprintf("%d%s", diff, suffix)
+		}
+		return "—"
+	}
+
+	return fmt.Sprintf(
+		"📊 今日进度对比 %s → %s\n"+
+			"  🟢已掌握 %d  (%s)\n"+
+			"  🟡基本掌握 %d  (%s)\n"+
+			"  🔴待巩固 %d  (%s)\n"+
+			"  💬 今日复习 %d词，其中答错 %d词\n"+
+			"  📈 累计答错次数 %d  (%s)",
+		prev.Date, latest.Date,
+		latest.GreenCount, fn(greenDiff, ""),
+		latest.YellowCount, fn(yellowDiff, ""),
+		latest.RedCount, fn(redDiff, ""),
+		latest.WordsReviewed, latest.ErrorsToday,
+		latest.CumulativeErrors, fn(errDiff, ""),
+	)
 }
 
 // ============================================================
@@ -681,9 +816,22 @@ func main() {
 		fmt.Fprintf(os.Stderr, "❌ 创建输出目录失败: %v\n", err)
 		os.Exit(1)
 	}
-	if err := generateReviewExcel(cfg, dueItems, sentenceItems, outputFile); err != nil {
+	if err := generateReviewExcel(cfg, dueItems, sentenceItems, db.Stats, outputFile); err != nil {
 		fmt.Fprintf(os.Stderr, "❌ 生成Excel失败: %v\n", err)
 		os.Exit(1)
+	}
+
+
+	// ---- 追加日统计快照 ----
+	stat := computeStats(&db, len(dueItems), 0) // errorsToday在反馈时填写
+	if len(db.Stats) > 0 && db.Stats[len(db.Stats)-1].Date == stat.Date {
+		db.Stats[len(db.Stats)-1] = stat
+	} else {
+		db.Stats = append(db.Stats, stat)
+	}
+	db.Updated = today.Format("2006-01-02")
+	if b, err := json.MarshalIndent(db, "", "  "); err == nil {
+		os.WriteFile(cfg.ProgressFile, b, 0644)
 	}
 
 	// ---- 上传 COS ----
@@ -694,10 +842,18 @@ func main() {
 
 	// ---- 输出 ----
 	totalWords := redCount + yellowCount + greenCount
-	fmt.Printf("✅ 日语复习列表已生成\n")
+	fmt.Printf("✅ 复习列表已生成\n")
 	fmt.Printf("   日期: %s\n", today.Format("2006-01-02"))
 	fmt.Printf("   文件: %s\n", outputFile)
 	fmt.Printf("   📊 今日到期: 🔴%d  🟡%d  🟢%d  📝%d  共%d项\n",
 		redCount, yellowCount, greenCount, len(sentenceItems),
 		totalWords+len(sentenceItems))
+
+	// ---- 对比 ----
+	if len(db.Stats) >= 2 {
+		fmt.Println()
+		fmt.Println(statsDiff(db.Stats[len(db.Stats)-1], db.Stats[len(db.Stats)-2]))
+	} else {
+		fmt.Println("  📋 首次统计，暂无对比数据")
+	}
 }
