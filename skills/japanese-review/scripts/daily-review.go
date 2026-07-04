@@ -37,6 +37,11 @@ import (
 
 // Config 程序配置，所有字段均可通过 JSON 文件覆盖
 type Config struct {
+	// 语言（用于区分多语言数据，如 japanese / english / korean）
+	Language string `json:"language"`
+
+	// 本地路径
+	DataDir      string `json:"data_dir"`
 	// 本地路径
 	ProgressFile string `json:"progress_file"` // 词汇数据库路径
 	OutputDir    string `json:"output_dir"`    // 复习Excel输出目录
@@ -70,14 +75,18 @@ type Config struct {
 // defaultConfig 返回内置默认配置
 func defaultConfig() Config {
 	var cfg Config
-	cfg.ProgressFile = "/home/zhangyufeng/.openclaw/workspace/skills/japanese-review/data/progress.json"
-	cfg.OutputDir = "/home/zhangyufeng/.openclaw/workspace/skills/japanese-review/data/review"
+	cfg.DataDir = "/home/zhangyufeng/.openclaw/workspace/skills/japanese-review/data"
+	cfg.Language = "japanese"
+	cfg.ProgressFile = "/home/zhangyufeng/.openclaw/workspace/skills/japanese-review/data/japanese/progress.json"
+	cfg.OutputDir = "/home/zhangyufeng/.openclaw/workspace/skills/japanese-review/data/japanese/review"
 	cfg.NotesDir = "/home/zhangyufeng/.openclaw/workspace/skills/japanese-review/references"
 
 	cfg.COS.BucketURL = "https://openclaw-backup-tx-1251036673.cos.ap-beijing.myqcloud.com"
 	cfg.COS.Region = "ap-beijing"
-	cfg.COS.Progress = "japanese/progress.json"
-	cfg.COS.ReviewFmt = "japanese/review/日语复习_%s.xlsx"
+	// COS路径会自动基于Language字段拼接：japanese/{language}/...
+	// 也支持通过配置文件直接覆盖
+	cfg.COS.Progress = ""  // 空=自动基于语言生成
+	cfg.COS.ReviewFmt = "" // 空=自动基于语言生成
 
 	cfg.Ebbinghaus = map[int]int{
 		0: 1, // 刚错或刚学
@@ -112,6 +121,19 @@ func loadConfig(path string) (Config, error) {
 		if err := json.Unmarshal(data, &cfg); err != nil {
 			return cfg, fmt.Errorf("解析配置失败: %w", err)
 		}
+	}
+	// 自动补全COS路径（基于语言）
+	lang := cfg.Language
+	if lang == "" {
+		lang = "japanese"
+	}
+	if cfg.COS.Progress == "" {
+		cfg.COS.Progress = fmt.Sprintf("japanese/%s/progress.json", lang)
+	}
+	if cfg.COS.ReviewFmt == "" {
+		// 默认路径：japanese/{language}/review/复习_YYYYMMDD.xlsx
+		// %%s 在第一次Sprintf中转义为字面%%，保留给调用者填入日期
+		cfg.COS.ReviewFmt = fmt.Sprintf("japanese/%%s/review/复习_%%%%s.xlsx", lang)
 	}
 	return cfg, nil
 }
