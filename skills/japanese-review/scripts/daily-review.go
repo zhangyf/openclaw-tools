@@ -17,6 +17,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"io"
 	"math/rand"
 	"net/http"
 	"net/url"
@@ -461,19 +462,19 @@ func tryUploadToCOS(cfg Config, localPath, cosPath string) {
 	}
 	data, err := os.ReadFile(localPath)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "⚠️  读取 %s 失败: %v\n", localPath, err)
+		fmt.Fprintf(os.Stderr, "  ⚠️  读取 %s 失败: %v\n", localPath, err)
 		return
 	}
 	client, err := newCosClient(cfg.COS.BucketURL, cfg.COS.Region)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "⚠️  COS 客户端创建失败: %v\n", err)
+		fmt.Fprintf(os.Stderr, "  ⚠️  COS 客户端创建失败: %v\n", err)
 		return
 	}
 	if err := cosPutObject(client, cosPath, data); err != nil {
-		fmt.Fprintf(os.Stderr, "⚠️  COS 上传失败 [%s]: %v\n", cosPath, err)
+		fmt.Fprintf(os.Stderr, "  ⚠️  COS 上传失败 [%s]: %v\n", cosPath, err)
 		return
 	}
-	fmt.Printf("  ☁️  已上传: %s\n", cosPath)
+	fmt.Printf("  ☁️  已上传COS: %s\n", cosPath)
 }
 
 func newCosClient(bucketURL, _ string) (*cos.Client, error) {
@@ -499,6 +500,15 @@ func newCosClient(bucketURL, _ string) (*cos.Client, error) {
 func cosPutObject(client *cos.Client, path string, data []byte) error {
 	_, err := client.Object.Put(context.Background(), path, bytes.NewReader(data), nil)
 	return err
+}
+
+func cosGetObject(client *cos.Client, path string) ([]byte, error) {
+	resp, err := client.Object.Get(context.Background(), path, nil)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	return io.ReadAll(resp.Body)
 }
 
 // ============================================================
@@ -533,6 +543,27 @@ func main() {
 		os.Exit(1)
 	}
 	today = time.Date(today.Year(), today.Month(), today.Day(), 0, 0, 0, 0, today.Location())
+
+	// ---- 从COS同步最新数据 ----
+	if cfg.COS.Enabled {
+		client, err := newCosClient(cfg.COS.BucketURL, cfg.COS.Region)
+		if err == nil {
+			remoteData, err := cosGetObject(client, cfg.COS.Progress)
+			if err == nil {
+				// 验证是合法JSON后再覆盖本地
+				var testDB VocabDB
+				if json.Unmarshal(remoteData, &testDB) == nil && len(testDB.Words) > 0 {
+					if err := os.WriteFile(cfg.ProgressFile, remoteData, 0644); err == nil {
+						fmt.Println("  ☁️  已从COS同步最新数据")
+					}
+				}
+			} else {
+				fmt.Fprintf(os.Stderr, "  ⚠️  COS同步失败(使用本地数据): %v\n", err)
+			}
+		} else {
+			fmt.Fprintf(os.Stderr, "  ⚠️  COS客户端创建失败(使用本地数据): %v\n", err)
+		}
+	}
 
 	// ---- 读取数据库 ----
 	data, err := os.ReadFile(cfg.ProgressFile)
