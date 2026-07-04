@@ -1,0 +1,4649 @@
+{
+  "words": [
+    {
+      "japanese": "すし",
+      "chinese": "寿司",
+      "review_count": 8,
+      "error_count": 0,
+      "consecutive_correct": 7,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "みず",
+      "chinese": "水",
+      "review_count": 7,
+      "error_count": 0,
+      "consecutive_correct": 7,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "おちゃ",
+      "chinese": "茶",
+      "review_count": 7,
+      "error_count": 0,
+      "consecutive_correct": 7,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "ください",
+      "chinese": "请、请给我",
+      "review_count": 7,
+      "error_count": 0,
+      "consecutive_correct": 7,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "と",
+      "chinese": "和",
+      "review_count": 7,
+      "error_count": 0,
+      "consecutive_correct": 7,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "ごはん",
+      "chinese": "饭",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "やさしい",
+      "chinese": "温柔的",
+      "review_count": 7,
+      "error_count": 0,
+      "consecutive_correct": 7,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "いしゃ",
+      "chinese": "医生",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "です",
+      "chinese": "是(判断词)",
+      "review_count": 21,
+      "error_count": 3,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "かっこいい",
+      "chinese": "酷的",
+      "review_count": 23,
+      "error_count": 2,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "べんごし",
+      "chinese": "律师",
+      "review_count": 8,
+      "error_count": 0,
+      "consecutive_correct": 7,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "ひと",
+      "chinese": "人",
+      "review_count": 7,
+      "error_count": 0,
+      "consecutive_correct": 7,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "けん",
+      "chinese": "剑/健(人名)",
+      "review_count": 7,
+      "error_count": 0,
+      "consecutive_correct": 7,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "はな",
+      "chinese": "花",
+      "review_count": 7,
+      "error_count": 0,
+      "consecutive_correct": 7,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "さん（敬称）",
+      "chinese": "先生/女士(敬称)",
+      "review_count": 7,
+      "error_count": 0,
+      "consecutive_correct": 7,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "こんにちは",
+      "chinese": "你好",
+      "review_count": 23,
+      "error_count": 3,
+      "consecutive_correct": 0,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "なまえ",
+      "chinese": "名字",
+      "review_count": 23,
+      "error_count": 2,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "せんせい",
+      "chinese": "老师",
+      "review_count": 22,
+      "error_count": 2,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "がくせい",
+      "chinese": "学生",
+      "review_count": 21,
+      "error_count": 2,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "こんばんは",
+      "chinese": "晚上好",
+      "review_count": 22,
+      "error_count": 2,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "またあした",
+      "chinese": "明天见",
+      "review_count": 7,
+      "error_count": 0,
+      "consecutive_correct": 7,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "ラーメン",
+      "chinese": "拉面",
+      "review_count": 21,
+      "error_count": 4,
+      "consecutive_correct": 3,
+      "last_review": "07/01",
+      "status": "yellow"
+    },
+    {
+      "japanese": "サラダ",
+      "chinese": "沙拉",
+      "review_count": 8,
+      "error_count": 0,
+      "consecutive_correct": 7,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "はい",
+      "chinese": "是(肯定回答)",
+      "review_count": 8,
+      "error_count": 0,
+      "consecutive_correct": 7,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "ピザ",
+      "chinese": "披萨",
+      "review_count": 8,
+      "error_count": 0,
+      "consecutive_correct": 7,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "か",
+      "chinese": "吗(疑问)",
+      "review_count": 8,
+      "error_count": 0,
+      "consecutive_correct": 7,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "ケーキ",
+      "chinese": "蛋糕",
+      "review_count": 8,
+      "error_count": 0,
+      "consecutive_correct": 7,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "おいしい",
+      "chinese": "好吃的",
+      "review_count": 23,
+      "error_count": 4,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "これ",
+      "chinese": "这个(独立/事物)",
+      "review_count": 20,
+      "error_count": 2,
+      "consecutive_correct": 3,
+      "last_review": "06/28",
+      "status": "green"
+    },
+    {
+      "japanese": "いいえ",
+      "chinese": "不、不是",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "きれい",
+      "chinese": "漂亮、干净",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "ほん",
+      "chinese": "书",
+      "review_count": 18,
+      "error_count": 1,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "読みます",
+      "chinese": "读",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "ざっし",
+      "chinese": "杂志",
+      "review_count": 18,
+      "error_count": 1,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "ときどき",
+      "chinese": "有时",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "ニュース",
+      "chinese": "新闻",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "まんが",
+      "chinese": "漫画",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "やきゅう",
+      "chinese": "棒球",
+      "review_count": 18,
+      "error_count": 1,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "Jポップ",
+      "chinese": "J-POP",
+      "review_count": 18,
+      "error_count": 1,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "アニメ",
+      "chinese": "动漫",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "おんがく",
+      "chinese": "音乐",
+      "review_count": 26,
+      "error_count": 6,
+      "consecutive_correct": 3,
+      "last_review": "06/28",
+      "status": "yellow"
+    },
+    {
+      "japanese": "アメリカ",
+      "chinese": "美国",
+      "review_count": 7,
+      "error_count": 0,
+      "consecutive_correct": 7,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "にほん",
+      "chinese": "日本",
+      "review_count": 7,
+      "error_count": 0,
+      "consecutive_correct": 7,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "おおきい",
+      "chinese": "大的",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "にほんじん",
+      "chinese": "日本人",
+      "review_count": 20,
+      "error_count": 1,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "カナダじん",
+      "chinese": "加拿大人",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "カナダ",
+      "chinese": "加拿大",
+      "review_count": 18,
+      "error_count": 1,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "アメリカじん",
+      "chinese": "美国人",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "ちいさい",
+      "chinese": "小的",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "ベトナム",
+      "chinese": "越南",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "ベトナムじん",
+      "chinese": "越南人",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "ホテル",
+      "chinese": "酒店",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "どこ",
+      "chinese": "哪里",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "コンビニ",
+      "chinese": "便利店",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "ここ",
+      "chinese": "这里",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "じゃない",
+      "chinese": "不是",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "デパート",
+      "chinese": "百货商店",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "ブラジル",
+      "chinese": "巴西",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "ブラジルじん",
+      "chinese": "巴西人",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "バスてい",
+      "chinese": "公交车站",
+      "review_count": 22,
+      "error_count": 3,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "コート",
+      "chinese": "大衣/外套",
+      "review_count": 7,
+      "error_count": 0,
+      "consecutive_correct": 7,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "わたしの",
+      "chinese": "我的",
+      "review_count": 7,
+      "error_count": 0,
+      "consecutive_correct": 7,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "かばん",
+      "chinese": "包、书包",
+      "review_count": 7,
+      "error_count": 0,
+      "consecutive_correct": 7,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "しろい",
+      "chinese": "白色的",
+      "review_count": 7,
+      "error_count": 0,
+      "consecutive_correct": 7,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "くつ",
+      "chinese": "鞋子",
+      "review_count": 7,
+      "error_count": 0,
+      "consecutive_correct": 7,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "よく",
+      "chinese": "经常",
+      "review_count": 7,
+      "error_count": 0,
+      "consecutive_correct": 7,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "ききます",
+      "chinese": "听(动词)",
+      "review_count": 7,
+      "error_count": 0,
+      "consecutive_correct": 7,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "あかい",
+      "chinese": "红色的",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "いま",
+      "chinese": "起居室(居間)",
+      "review_count": 4,
+      "error_count": 1,
+      "consecutive_correct": 3,
+      "last_review": "06/29",
+      "status": "yellow"
+    },
+    {
+      "japanese": "どうも",
+      "chinese": "你好/谢谢/对不起",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "どうぞ",
+      "chinese": "请",
+      "review_count": 20,
+      "error_count": 1,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "ちず",
+      "chinese": "地图",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "しずか",
+      "chinese": "安静的",
+      "review_count": 21,
+      "error_count": 1,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "たなか",
+      "chinese": "田中(姓氏)",
+      "review_count": 21,
+      "error_count": 2,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "あかるい",
+      "chinese": "明亮的",
+      "review_count": 21,
+      "error_count": 1,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "てぶくろ",
+      "chinese": "手套",
+      "review_count": 21,
+      "error_count": 2,
+      "consecutive_correct": 0,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "すみません",
+      "chinese": "对不起",
+      "review_count": 21,
+      "error_count": 4,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "にすんでいます",
+      "chinese": "住在...",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "も",
+      "chinese": "也",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "おおさか",
+      "chinese": "大阪",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "どう",
+      "chinese": "怎样",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "とし",
+      "chinese": "城市/年龄",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "とても",
+      "chinese": "非常",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "まち",
+      "chinese": "城镇/街道",
+      "review_count": 21,
+      "error_count": 5,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "えき",
+      "chinese": "车站",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "だいがく",
+      "chinese": "大学",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "にぎやか",
+      "chinese": "热闹的",
+      "review_count": 21,
+      "error_count": 2,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "あさ",
+      "chinese": "早上",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "あさごはん",
+      "chinese": "早饭",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "パン",
+      "chinese": "面包",
+      "review_count": 19,
+      "error_count": 1,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "たべます",
+      "chinese": "吃",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "のみます",
+      "chinese": "喝",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "ジュース",
+      "chinese": "果汁",
+      "review_count": 21,
+      "error_count": 1,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "コーヒー",
+      "chinese": "咖啡",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "まいあさ",
+      "chinese": "每天早上",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "パスタ",
+      "chinese": "意大利面",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "ひるごはん",
+      "chinese": "午饭",
+      "review_count": 22,
+      "error_count": 4,
+      "consecutive_correct": 0,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "いち",
+      "chinese": "一",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "に",
+      "chinese": "二",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "さん（数字）",
+      "chinese": "三",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "よん",
+      "chinese": "四",
+      "review_count": 21,
+      "error_count": 3,
+      "consecutive_correct": 3,
+      "last_review": "07/01",
+      "status": "green"
+    },
+    {
+      "japanese": "ご（数字）",
+      "chinese": "五",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "ろく",
+      "chinese": "六",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "しち",
+      "chinese": "七",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "はち",
+      "chinese": "八",
+      "review_count": 19,
+      "error_count": 1,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "きゅう",
+      "chinese": "九",
+      "review_count": 19,
+      "error_count": 2,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "じゅう",
+      "chinese": "十",
+      "review_count": 19,
+      "error_count": 2,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "よじ",
+      "chinese": "四点钟",
+      "review_count": 18,
+      "error_count": 1,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "しちじ",
+      "chinese": "七点钟",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "べんとう",
+      "chinese": "便当",
+      "review_count": 19,
+      "error_count": 1,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "ろくじ",
+      "chinese": "六点钟",
+      "review_count": 21,
+      "error_count": 2,
+      "consecutive_correct": 3,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "カレー",
+      "chinese": "咖喱",
+      "review_count": 19,
+      "error_count": 3,
+      "consecutive_correct": 0,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "ばんごはん",
+      "chinese": "晚饭",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "ばん",
+      "chinese": "晚上",
+      "review_count": 18,
+      "error_count": 2,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "まいばん",
+      "chinese": "每天晚上",
+      "review_count": 18,
+      "error_count": 2,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "ロック",
+      "chinese": "摇滚",
+      "review_count": 18,
+      "error_count": 4,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "ともだち",
+      "chinese": "朋友",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "おもしろい",
+      "chinese": "有趣的",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "なかやま",
+      "chinese": "中山(姓氏)",
+      "review_count": 22,
+      "error_count": 4,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "なんじ",
+      "chinese": "几点",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "はん",
+      "chinese": "半",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "くうこう",
+      "chinese": "机场",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "ちかてつ",
+      "chinese": "地铁",
+      "review_count": 21,
+      "error_count": 3,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "あそこ",
+      "chinese": "那里",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "かさ",
+      "chinese": "伞",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "きっぷ",
+      "chinese": "票",
+      "review_count": 19,
+      "error_count": 1,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "スマホ",
+      "chinese": "智能手机",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "ぼうし",
+      "chinese": "帽子",
+      "review_count": 19,
+      "error_count": 2,
+      "consecutive_correct": 4,
+      "last_review": "07/02",
+      "status": "green"
+    },
+    {
+      "japanese": "おなまえは",
+      "chinese": "您叫什么名字",
+      "review_count": 18,
+      "error_count": 1,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "はじめまして",
+      "chinese": "初次见面",
+      "review_count": 19,
+      "error_count": 2,
+      "consecutive_correct": 0,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "しゅっしん",
+      "chinese": "出身",
+      "review_count": 19,
+      "error_count": 1,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "は（主题助词）",
+      "chinese": "是(主题助词)",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "ふく",
+      "chinese": "衣服",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "あたらしい",
+      "chinese": "新的",
+      "review_count": 20,
+      "error_count": 3,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "さいふ",
+      "chinese": "钱包",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "この",
+      "chinese": "这个(后接名词)",
+      "review_count": 18,
+      "error_count": 1,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "ふるい",
+      "chinese": "旧的",
+      "review_count": 18,
+      "error_count": 2,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "ほしい",
+      "chinese": "想要",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "が",
+      "chinese": "(主语)格助词",
+      "review_count": 18,
+      "error_count": 2,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "はちょっと",
+      "chinese": "稍微",
+      "review_count": 17,
+      "error_count": 3,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "Tシャツ",
+      "chinese": "T恤",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "ネクタイ",
+      "chinese": "领带",
+      "review_count": 19,
+      "error_count": 1,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "やすい",
+      "chinese": "便宜的、容易的",
+      "review_count": 18,
+      "error_count": 2,
+      "consecutive_correct": 4,
+      "last_review": "07/02",
+      "status": "green"
+    },
+    {
+      "japanese": "スカート",
+      "chinese": "裙子",
+      "review_count": 19,
+      "error_count": 3,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "ね",
+      "chinese": "ね(语气词)",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "えん",
+      "chinese": "日元",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "いくら",
+      "chinese": "多少钱",
+      "review_count": 20,
+      "error_count": 6,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "ひゃく",
+      "chinese": "百",
+      "review_count": 19,
+      "error_count": 1,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "かわいい",
+      "chinese": "可爱的",
+      "review_count": 17,
+      "error_count": 1,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "あおい",
+      "chinese": "蓝色的",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "たかい",
+      "chinese": "贵的、高的",
+      "review_count": 20,
+      "error_count": 8,
+      "consecutive_correct": 0,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "みせ",
+      "chinese": "店、商店",
+      "review_count": 17,
+      "error_count": 1,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "ジャケット",
+      "chinese": "夹克",
+      "review_count": 19,
+      "error_count": 4,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "ありがとうございます",
+      "chinese": "谢谢(敬语)",
+      "review_count": 17,
+      "error_count": 2,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "くろい",
+      "chinese": "黑色的",
+      "review_count": 20,
+      "error_count": 5,
+      "consecutive_correct": 0,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "せん",
+      "chinese": "千",
+      "review_count": 17,
+      "error_count": 1,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "します",
+      "chinese": "做",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "サッカー",
+      "chinese": "足球",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "バスケットボール",
+      "chinese": "篮球",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "やまぐち",
+      "chinese": "山口(姓氏)",
+      "review_count": 13,
+      "error_count": 3,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "なおみ",
+      "chinese": "直美(人名)",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "どんな",
+      "chinese": "什么样的",
+      "review_count": 16,
+      "error_count": 7,
+      "consecutive_correct": 3,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "ホラー",
+      "chinese": "恐怖(片)",
+      "review_count": 14,
+      "error_count": 1,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "えいが",
+      "chinese": "电影",
+      "review_count": 13,
+      "error_count": 3,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "ドラマ",
+      "chinese": "电视剧",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "ファンタジー",
+      "chinese": "奇幻",
+      "review_count": 14,
+      "error_count": 1,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "すき",
+      "chinese": "喜欢",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "Kポップ",
+      "chinese": "K-Pop",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "かのじょ",
+      "chinese": "女朋友",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "かれし",
+      "chinese": "男朋友",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "かんこく",
+      "chinese": "韩国",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "ちゅうごく",
+      "chinese": "中国",
+      "review_count": 13,
+      "error_count": 2,
+      "consecutive_correct": 0,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "イギリス",
+      "chinese": "英国",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "エリカ",
+      "chinese": "绘里香(人名)",
+      "review_count": 14,
+      "error_count": 2,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "ダニエル",
+      "chinese": "丹尼尔(人名)",
+      "review_count": 14,
+      "error_count": 3,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "こちら",
+      "chinese": "这边/这位",
+      "review_count": 13,
+      "error_count": 1,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "と言います",
+      "chinese": "叫做...",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "アンドリュー",
+      "chinese": "安德鲁(人名)",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "サンドイッチ",
+      "chinese": "三明治",
+      "review_count": 6,
+      "error_count": 1,
+      "consecutive_correct": 2,
+      "last_review": "07/01",
+      "status": "yellow"
+    },
+    {
+      "japanese": "ごちそう",
+      "chinese": "好吃的/盛宴",
+      "review_count": 8,
+      "error_count": 3,
+      "consecutive_correct": 1,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "さま",
+      "chinese": "様(敬称)",
+      "review_count": 3,
+      "error_count": 0,
+      "consecutive_correct": 3,
+      "last_review": "06/28",
+      "status": "yellow"
+    },
+    {
+      "japanese": "でした",
+      "chinese": "是(过去式)",
+      "review_count": 3,
+      "error_count": 0,
+      "consecutive_correct": 3,
+      "last_review": "06/29",
+      "status": "yellow"
+    },
+    {
+      "japanese": "どういたしまして",
+      "chinese": "不客气",
+      "review_count": 8,
+      "error_count": 5,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "ちゅうごくじん",
+      "chinese": "中国人",
+      "review_count": 3,
+      "error_count": 0,
+      "consecutive_correct": 3,
+      "last_review": "06/28",
+      "status": "yellow"
+    },
+    {
+      "japanese": "かんこくじん",
+      "chinese": "韩国人",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "フランスじん",
+      "chinese": "法国人",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "りゅうがくせい",
+      "chinese": "留学生",
+      "review_count": 6,
+      "error_count": 1,
+      "consecutive_correct": 2,
+      "last_review": "07/01",
+      "status": "yellow"
+    },
+    {
+      "japanese": "きょうじゅ",
+      "chinese": "教授",
+      "review_count": 13,
+      "error_count": 5,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "しゃいん",
+      "chinese": "职员",
+      "review_count": 8,
+      "error_count": 4,
+      "consecutive_correct": 1,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "かいしゃいん",
+      "chinese": "公司职员",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "てんいん",
+      "chinese": "店员",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "けんしゅうせい",
+      "chinese": "进修生",
+      "review_count": 14,
+      "error_count": 6,
+      "consecutive_correct": 3,
+      "last_review": "06/28",
+      "status": "red"
+    },
+    {
+      "japanese": "きぎょう",
+      "chinese": "企业",
+      "review_count": 16,
+      "error_count": 6,
+      "consecutive_correct": 3,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "しゃちょう",
+      "chinese": "社长",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "かちょう",
+      "chinese": "科长",
+      "review_count": 5,
+      "error_count": 0,
+      "consecutive_correct": 5,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "でむかえ",
+      "chinese": "迎接",
+      "review_count": 7,
+      "error_count": 2,
+      "consecutive_correct": 2,
+      "last_review": "07/02",
+      "status": "yellow"
+    },
+    {
+      "japanese": "あのひと",
+      "chinese": "那个人",
+      "review_count": 4,
+      "error_count": 1,
+      "consecutive_correct": 3,
+      "last_review": "06/28",
+      "status": "yellow"
+    },
+    {
+      "japanese": "あなた",
+      "chinese": "你",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "あっ",
+      "chinese": "哎呀(感叹)",
+      "review_count": 3,
+      "error_count": 0,
+      "consecutive_correct": 3,
+      "last_review": "06/28",
+      "status": "yellow"
+    },
+    {
+      "japanese": "よろしくおねがいします",
+      "chinese": "请多关照",
+      "review_count": 4,
+      "error_count": 1,
+      "consecutive_correct": 3,
+      "last_review": "06/28",
+      "status": "yellow"
+    },
+    {
+      "japanese": "こちらこそ",
+      "chinese": "我才要请您多多关照",
+      "review_count": 5,
+      "error_count": 1,
+      "consecutive_correct": 3,
+      "last_review": "07/01",
+      "status": "yellow"
+    },
+    {
+      "japanese": "そうです",
+      "chinese": "是这样",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "ちがいます",
+      "chinese": "不是",
+      "review_count": 9,
+      "error_count": 6,
+      "consecutive_correct": 2,
+      "last_review": "07/02",
+      "status": "red"
+    },
+    {
+      "japanese": "わかりません",
+      "chinese": "不知道",
+      "review_count": 8,
+      "error_count": 2,
+      "consecutive_correct": 3,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "どうもすみません",
+      "chinese": "实在对不起",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "おう",
+      "chinese": "王(姓氏)",
+      "review_count": 12,
+      "error_count": 3,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "ちょう",
+      "chinese": "张(姓氏)",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "もりけんたろう",
+      "chinese": "森健太郎",
+      "review_count": 12,
+      "error_count": 6,
+      "consecutive_correct": 0,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "はやし",
+      "chinese": "林(姓氏)",
+      "review_count": 6,
+      "error_count": 1,
+      "consecutive_correct": 2,
+      "last_review": "07/01",
+      "status": "yellow"
+    },
+    {
+      "japanese": "おのみどり",
+      "chinese": "小野绿",
+      "review_count": 12,
+      "error_count": 4,
+      "consecutive_correct": 0,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "よしだ",
+      "chinese": "吉田(姓氏)",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "なかむら",
+      "chinese": "中村(姓氏)",
+      "review_count": 7,
+      "error_count": 3,
+      "consecutive_correct": 3,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "だろう",
+      "chinese": "太郎(人名)",
+      "review_count": 8,
+      "error_count": 4,
+      "consecutive_correct": 2,
+      "last_review": "07/02",
+      "status": "red"
+    },
+    {
+      "japanese": "キム",
+      "chinese": "金(姓氏)",
+      "review_count": 7,
+      "error_count": 2,
+      "consecutive_correct": 2,
+      "last_review": "07/01",
+      "status": "yellow"
+    },
+    {
+      "japanese": "デュポン",
+      "chinese": "迪蓬(姓氏)",
+      "review_count": 6,
+      "error_count": 1,
+      "consecutive_correct": 2,
+      "last_review": "07/01",
+      "status": "yellow"
+    },
+    {
+      "japanese": "スミス",
+      "chinese": "史密斯(姓氏)",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "ジョンソン",
+      "chinese": "约翰逊(姓氏)",
+      "review_count": 6,
+      "error_count": 2,
+      "consecutive_correct": 3,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "りしゅうれい",
+      "chinese": "李秀丽(人名)",
+      "review_count": 5,
+      "error_count": 2,
+      "consecutive_correct": 3,
+      "last_review": "06/29",
+      "status": "red"
+    },
+    {
+      "japanese": "とうきょうだいがく",
+      "chinese": "东京大学",
+      "review_count": 4,
+      "error_count": 1,
+      "consecutive_correct": 3,
+      "last_review": "06/28",
+      "status": "yellow"
+    },
+    {
+      "japanese": "ぺきんだいがく",
+      "chinese": "北京大学",
+      "review_count": 5,
+      "error_count": 2,
+      "consecutive_correct": 3,
+      "last_review": "06/29",
+      "status": "red"
+    },
+    {
+      "japanese": "えんぴつ",
+      "chinese": "铅笔",
+      "review_count": 10,
+      "error_count": 2,
+      "consecutive_correct": 3,
+      "last_review": "06/28",
+      "status": "yellow"
+    },
+    {
+      "japanese": "しんぶん",
+      "chinese": "报纸",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "じしょ",
+      "chinese": "词典",
+      "review_count": 10,
+      "error_count": 4,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "カメラ",
+      "chinese": "照相机",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "テレビ",
+      "chinese": "电视机",
+      "review_count": 10,
+      "error_count": 2,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "パソコン",
+      "chinese": "个人电脑",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "ラジオ",
+      "chinese": "收音机",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "でんわ",
+      "chinese": "电话",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "つくえ",
+      "chinese": "桌子",
+      "review_count": 8,
+      "error_count": 1,
+      "consecutive_correct": 1,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "いす",
+      "chinese": "椅子",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "かぎ",
+      "chinese": "钥匙",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "とけい",
+      "chinese": "钟表",
+      "review_count": 11,
+      "error_count": 5,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "てちょう",
+      "chinese": "记事本",
+      "review_count": 13,
+      "error_count": 6,
+      "consecutive_correct": 0,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "しゃしん",
+      "chinese": "照片",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "くるま",
+      "chinese": "车",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "じてんしゃ",
+      "chinese": "自行车",
+      "review_count": 8,
+      "error_count": 1,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "おみやげ",
+      "chinese": "礼物/土特产",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "めいさんひん",
+      "chinese": "特产/名产",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "シルク",
+      "chinese": "丝绸",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "ハンカチ",
+      "chinese": "手绢",
+      "review_count": 10,
+      "error_count": 4,
+      "consecutive_correct": 0,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "どれ",
+      "chinese": "哪个",
+      "review_count": 10,
+      "error_count": 2,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "どの",
+      "chinese": "哪个(后接名词)",
+      "review_count": 10,
+      "error_count": 2,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "その",
+      "chinese": "那个(后接名词)",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "あの",
+      "chinese": "那个(远称,后接名词)",
+      "review_count": 10,
+      "error_count": 2,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "だれ",
+      "chinese": "谁",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "どなた",
+      "chinese": "哪位(礼貌)",
+      "review_count": 14,
+      "error_count": 4,
+      "consecutive_correct": 2,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "なん",
+      "chinese": "什么",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "かた",
+      "chinese": "位/人(礼貌)",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "かぞく",
+      "chinese": "家人/家属",
+      "review_count": 10,
+      "error_count": 3,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "はは",
+      "chinese": "(我)母亲",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "おかあさん",
+      "chinese": "母亲",
+      "review_count": 10,
+      "error_count": 2,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "かいしゃ",
+      "chinese": "公司",
+      "review_count": 11,
+      "error_count": 3,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "にほんご",
+      "chinese": "日语",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "ちゅうごくご",
+      "chinese": "中文",
+      "review_count": 10,
+      "error_count": 4,
+      "consecutive_correct": 0,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "ながしま",
+      "chinese": "长岛(姓氏)",
+      "review_count": 10,
+      "error_count": 3,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "ロンドン",
+      "chinese": "伦敦",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "えっ",
+      "chinese": "啊(吃惊/反问)",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "わあ",
+      "chinese": "哇(感叹)",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "ええ",
+      "chinese": "嗯(肯定应答)",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "おいくつ",
+      "chinese": "多大年纪(礼貌)",
+      "review_count": 6,
+      "error_count": 0,
+      "consecutive_correct": 6,
+      "last_review": "06/14",
+      "status": "green"
+    },
+    {
+      "japanese": "しょくどう",
+      "chinese": "食堂",
+      "review_count": 10,
+      "error_count": 4,
+      "consecutive_correct": 1,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "ゆうびんきょく",
+      "chinese": "邮局",
+      "review_count": 7,
+      "error_count": 2,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "ぎんこう",
+      "chinese": "银行",
+      "review_count": 8,
+      "error_count": 2,
+      "consecutive_correct": 2,
+      "last_review": "07/01",
+      "status": "yellow"
+    },
+    {
+      "japanese": "としょかん",
+      "chinese": "图书馆",
+      "review_count": 11,
+      "error_count": 5,
+      "consecutive_correct": 2,
+      "last_review": "07/02",
+      "status": "red"
+    },
+    {
+      "japanese": "マンション",
+      "chinese": "公寓",
+      "review_count": 8,
+      "error_count": 1,
+      "consecutive_correct": 3,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "きっさてん",
+      "chinese": "咖啡馆",
+      "review_count": 7,
+      "error_count": 3,
+      "consecutive_correct": 0,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "びょういん",
+      "chinese": "医院",
+      "review_count": 8,
+      "error_count": 2,
+      "consecutive_correct": 2,
+      "last_review": "07/01",
+      "status": "yellow"
+    },
+    {
+      "japanese": "ほんや",
+      "chinese": "书店",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "06/27",
+      "status": "yellow"
+    },
+    {
+      "japanese": "レストラン",
+      "chinese": "餐馆",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "06/27",
+      "status": "yellow"
+    },
+    {
+      "japanese": "ビル",
+      "chinese": "大楼",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "06/27",
+      "status": "yellow"
+    },
+    {
+      "japanese": "たてもの",
+      "chinese": "建筑物",
+      "review_count": 7,
+      "error_count": 1,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "うりば",
+      "chinese": "柜台",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "06/27",
+      "status": "yellow"
+    },
+    {
+      "japanese": "トイレ",
+      "chinese": "厕所",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "06/27",
+      "status": "yellow"
+    },
+    {
+      "japanese": "いりぐち",
+      "chinese": "入口",
+      "review_count": 7,
+      "error_count": 2,
+      "consecutive_correct": 0,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "じむしょ",
+      "chinese": "事务所",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "06/27",
+      "status": "yellow"
+    },
+    {
+      "japanese": "うけつけ",
+      "chinese": "接待处",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "06/27",
+      "status": "yellow"
+    },
+    {
+      "japanese": "そこ",
+      "chinese": "那里",
+      "review_count": 9,
+      "error_count": 3,
+      "consecutive_correct": 3,
+      "last_review": "07/01",
+      "status": "red"
+    },
+    {
+      "japanese": "そちら",
+      "chinese": "那边(礼貌)",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "06/27",
+      "status": "yellow"
+    },
+    {
+      "japanese": "あちら",
+      "chinese": "那边(远称礼貌)",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "06/27",
+      "status": "yellow"
+    },
+    {
+      "japanese": "どちら",
+      "chinese": "哪边(礼貌)",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "06/27",
+      "status": "yellow"
+    },
+    {
+      "japanese": "くに",
+      "chinese": "国家",
+      "review_count": 10,
+      "error_count": 3,
+      "consecutive_correct": 2,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "となり",
+      "chinese": "旁边",
+      "review_count": 11,
+      "error_count": 5,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "しゅうへん",
+      "chinese": "附近(大范围/周边)",
+      "review_count": 11,
+      "error_count": 5,
+      "consecutive_correct": 3,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "きょう",
+      "chinese": "今天",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "06/27",
+      "status": "yellow"
+    },
+    {
+      "japanese": "すいようび",
+      "chinese": "星期三",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "06/27",
+      "status": "yellow"
+    },
+    {
+      "japanese": "もくようび",
+      "chinese": "星期四",
+      "review_count": 8,
+      "error_count": 1,
+      "consecutive_correct": 3,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "デジカメ",
+      "chinese": "数码相机",
+      "review_count": 8,
+      "error_count": 1,
+      "consecutive_correct": 3,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "エスカレーター",
+      "chinese": "自动扶梯",
+      "review_count": 7,
+      "error_count": 1,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "バーゲンかいじょう",
+      "chinese": "特卖会场",
+      "review_count": 11,
+      "error_count": 4,
+      "consecutive_correct": 2,
+      "last_review": "07/01",
+      "status": "red"
+    },
+    {
+      "japanese": "シャンハイ",
+      "chinese": "上海",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "06/27",
+      "status": "yellow"
+    },
+    {
+      "japanese": "とうきょう",
+      "chinese": "东京",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "06/27",
+      "status": "yellow"
+    },
+    {
+      "japanese": "あのう",
+      "chinese": "请问(搭话)",
+      "review_count": 8,
+      "error_count": 1,
+      "consecutive_correct": 3,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "へや",
+      "chinese": "房间",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "にわ",
+      "chinese": "院子",
+      "review_count": 7,
+      "error_count": 1,
+      "consecutive_correct": 3,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "いえ",
+      "chinese": "家",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "はこ",
+      "chinese": "盒子",
+      "review_count": 6,
+      "error_count": 1,
+      "consecutive_correct": 2,
+      "last_review": "07/01",
+      "status": "yellow"
+    },
+    {
+      "japanese": "いぬ",
+      "chinese": "狗",
+      "review_count": 7,
+      "error_count": 1,
+      "consecutive_correct": 3,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "ねこ",
+      "chinese": "猫",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "ばいてん",
+      "chinese": "小卖部",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "そと",
+      "chinese": "外面",
+      "review_count": 4,
+      "error_count": 1,
+      "consecutive_correct": 0,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "あります",
+      "chinese": "有(物)",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "います",
+      "chinese": "有(人/动物)",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "うえ",
+      "chinese": "上面",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "した",
+      "chinese": "下面",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "まえ",
+      "chinese": "前面",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "うしろ",
+      "chinese": "后面",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "なか",
+      "chinese": "里面",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "ちかく",
+      "chinese": "附近(近旁/旁边)",
+      "review_count": 7,
+      "error_count": 3,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "よこはま",
+      "chinese": "横滨",
+      "review_count": 7,
+      "error_count": 1,
+      "consecutive_correct": 3,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "ひとりぐらし",
+      "chinese": "独居",
+      "review_count": 4,
+      "error_count": 1,
+      "consecutive_correct": 3,
+      "last_review": "06/28",
+      "status": "yellow"
+    },
+    {
+      "japanese": "ばしょ",
+      "chinese": "场所",
+      "review_count": 8,
+      "error_count": 5,
+      "consecutive_correct": 1,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "なごや",
+      "chinese": "名古屋",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "いもうと",
+      "chinese": "妹妹",
+      "review_count": 5,
+      "error_count": 2,
+      "consecutive_correct": 3,
+      "last_review": "06/29",
+      "status": "red"
+    },
+    {
+      "japanese": "りょうしん",
+      "chinese": "父母",
+      "review_count": 7,
+      "error_count": 3,
+      "consecutive_correct": 3,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "ええと",
+      "chinese": "嗯(思考)",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "こうえん",
+      "chinese": "公园",
+      "review_count": 6,
+      "error_count": 1,
+      "consecutive_correct": 2,
+      "last_review": "07/01",
+      "status": "yellow"
+    },
+    {
+      "japanese": "がっこう",
+      "chinese": "学校",
+      "review_count": 8,
+      "error_count": 4,
+      "consecutive_correct": 3,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "こうばん",
+      "chinese": "派出所",
+      "review_count": 4,
+      "error_count": 1,
+      "consecutive_correct": 3,
+      "last_review": "06/29",
+      "status": "yellow"
+    },
+    {
+      "japanese": "みなと",
+      "chinese": "港口",
+      "review_count": 7,
+      "error_count": 3,
+      "consecutive_correct": 2,
+      "last_review": "07/02",
+      "status": "red"
+    },
+    {
+      "japanese": "スーパー",
+      "chinese": "超市",
+      "review_count": 3,
+      "error_count": 0,
+      "consecutive_correct": 3,
+      "last_review": "06/28",
+      "status": "yellow"
+    },
+    {
+      "japanese": "こうじょう",
+      "chinese": "工厂",
+      "review_count": 8,
+      "error_count": 3,
+      "consecutive_correct": 0,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "ちゅうしゃじょう",
+      "chinese": "停车场",
+      "review_count": 6,
+      "error_count": 1,
+      "consecutive_correct": 2,
+      "last_review": "07/01",
+      "status": "yellow"
+    },
+    {
+      "japanese": "ガソリンスタンド",
+      "chinese": "加油站",
+      "review_count": 6,
+      "error_count": 1,
+      "consecutive_correct": 2,
+      "last_review": "07/01",
+      "status": "yellow"
+    },
+    {
+      "japanese": "やっきょく",
+      "chinese": "药店",
+      "review_count": 7,
+      "error_count": 2,
+      "consecutive_correct": 2,
+      "last_review": "07/02",
+      "status": "yellow"
+    },
+    {
+      "japanese": "えいがかん",
+      "chinese": "电影院",
+      "review_count": 3,
+      "error_count": 0,
+      "consecutive_correct": 3,
+      "last_review": "06/28",
+      "status": "yellow"
+    },
+    {
+      "japanese": "びじゅつかん",
+      "chinese": "美术馆",
+      "review_count": 7,
+      "error_count": 3,
+      "consecutive_correct": 2,
+      "last_review": "07/02",
+      "status": "red"
+    },
+    {
+      "japanese": "はくぶつかん",
+      "chinese": "博物馆",
+      "review_count": 7,
+      "error_count": 3,
+      "consecutive_correct": 2,
+      "last_review": "07/02",
+      "status": "red"
+    },
+    {
+      "japanese": "げきじょう",
+      "chinese": "剧场",
+      "review_count": 10,
+      "error_count": 8,
+      "consecutive_correct": 0,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "どうぶつえん",
+      "chinese": "动物园",
+      "review_count": 9,
+      "error_count": 5,
+      "consecutive_correct": 1,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "ゆうえんち",
+      "chinese": "游乐园",
+      "review_count": 8,
+      "error_count": 4,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "たいいくかん",
+      "chinese": "体育馆",
+      "review_count": 7,
+      "error_count": 3,
+      "consecutive_correct": 2,
+      "last_review": "07/02",
+      "status": "red"
+    },
+    {
+      "japanese": "しやくしょ",
+      "chinese": "市政府",
+      "review_count": 9,
+      "error_count": 6,
+      "consecutive_correct": 1,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "けいさつしょ",
+      "chinese": "警察局",
+      "review_count": 9,
+      "error_count": 6,
+      "consecutive_correct": 1,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "しょうぼうしょ",
+      "chinese": "消防局",
+      "review_count": 7,
+      "error_count": 3,
+      "consecutive_correct": 2,
+      "last_review": "07/02",
+      "status": "red"
+    },
+    {
+      "japanese": "やおや",
+      "chinese": "蔬菜店",
+      "review_count": 7,
+      "error_count": 3,
+      "consecutive_correct": 2,
+      "last_review": "07/02",
+      "status": "red"
+    },
+    {
+      "japanese": "にくや",
+      "chinese": "肉店",
+      "review_count": 6,
+      "error_count": 2,
+      "consecutive_correct": 3,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "さかなや",
+      "chinese": "鱼店",
+      "review_count": 7,
+      "error_count": 4,
+      "consecutive_correct": 0,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "そばや",
+      "chinese": "荞麦面店",
+      "review_count": 7,
+      "error_count": 3,
+      "consecutive_correct": 2,
+      "last_review": "07/02",
+      "status": "red"
+    },
+    {
+      "japanese": "とこや",
+      "chinese": "理发店",
+      "review_count": 6,
+      "error_count": 2,
+      "consecutive_correct": 3,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "いつも",
+      "chinese": "总是/经常",
+      "review_count": 7,
+      "error_count": 4,
+      "consecutive_correct": 3,
+      "last_review": "07/01",
+      "status": "red"
+    },
+    {
+      "japanese": "おきます",
+      "chinese": "起床",
+      "review_count": 3,
+      "error_count": 0,
+      "consecutive_correct": 3,
+      "last_review": "06/28",
+      "status": "yellow"
+    },
+    {
+      "japanese": "アクション",
+      "chinese": "动作",
+      "review_count": 7,
+      "error_count": 3,
+      "consecutive_correct": 2,
+      "last_review": "07/02",
+      "status": "red"
+    },
+    {
+      "japanese": "れいぞうこ",
+      "chinese": "冰箱",
+      "review_count": 8,
+      "error_count": 2,
+      "consecutive_correct": 3,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "かべ",
+      "chinese": "墙壁",
+      "review_count": 4,
+      "error_count": 1,
+      "consecutive_correct": 3,
+      "last_review": "06/29",
+      "status": "yellow"
+    },
+    {
+      "japanese": "スイッチ",
+      "chinese": "开关",
+      "review_count": 6,
+      "error_count": 2,
+      "consecutive_correct": 2,
+      "last_review": "07/02",
+      "status": "red"
+    },
+    {
+      "japanese": "ほんだな",
+      "chinese": "书架",
+      "review_count": 7,
+      "error_count": 3,
+      "consecutive_correct": 1,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "ベッド",
+      "chinese": "床",
+      "review_count": 6,
+      "error_count": 2,
+      "consecutive_correct": 2,
+      "last_review": "07/02",
+      "status": "red"
+    },
+    {
+      "japanese": "めがね",
+      "chinese": "眼镜",
+      "review_count": 3,
+      "error_count": 0,
+      "consecutive_correct": 3,
+      "last_review": "06/28",
+      "status": "yellow"
+    },
+    {
+      "japanese": "ビデオ",
+      "chinese": "录像机",
+      "review_count": 4,
+      "error_count": 1,
+      "consecutive_correct": 3,
+      "last_review": "06/29",
+      "status": "yellow"
+    },
+    {
+      "japanese": "サッカーボール",
+      "chinese": "足球(球)",
+      "review_count": 5,
+      "error_count": 1,
+      "consecutive_correct": 2,
+      "last_review": "07/02",
+      "status": "yellow"
+    },
+    {
+      "japanese": "ビール",
+      "chinese": "啤酒",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "ウイスキー",
+      "chinese": "威士忌",
+      "review_count": 6,
+      "error_count": 3,
+      "consecutive_correct": 3,
+      "last_review": "07/01",
+      "status": "red"
+    },
+    {
+      "japanese": "こども",
+      "chinese": "孩子",
+      "review_count": 7,
+      "error_count": 4,
+      "consecutive_correct": 3,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "きょうだい",
+      "chinese": "兄弟姐妹",
+      "review_count": 7,
+      "error_count": 4,
+      "consecutive_correct": 3,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "おとこ",
+      "chinese": "男",
+      "review_count": 8,
+      "error_count": 5,
+      "consecutive_correct": 2,
+      "last_review": "07/01",
+      "status": "red"
+    },
+    {
+      "japanese": "おんな",
+      "chinese": "女",
+      "review_count": 4,
+      "error_count": 1,
+      "consecutive_correct": 3,
+      "last_review": "06/29",
+      "status": "yellow"
+    },
+    {
+      "japanese": "せいと",
+      "chinese": "学生(中小学)",
+      "review_count": 5,
+      "error_count": 2,
+      "consecutive_correct": 3,
+      "last_review": "07/01",
+      "status": "red"
+    },
+    {
+      "japanese": "きょうしつ",
+      "chinese": "教室",
+      "review_count": 7,
+      "error_count": 1,
+      "consecutive_correct": 3,
+      "last_review": "07/04",
+      "status": "green"
+    },
+    {
+      "japanese": "かいぎしつ",
+      "chinese": "会议室",
+      "review_count": 4,
+      "error_count": 1,
+      "consecutive_correct": 3,
+      "last_review": "06/29",
+      "status": "yellow"
+    },
+    {
+      "japanese": "としょしつ",
+      "chinese": "图书室",
+      "review_count": 4,
+      "error_count": 1,
+      "consecutive_correct": 3,
+      "last_review": "06/29",
+      "status": "yellow"
+    },
+    {
+      "japanese": "はなや",
+      "chinese": "花店",
+      "review_count": 5,
+      "error_count": 2,
+      "consecutive_correct": 3,
+      "last_review": "06/29",
+      "status": "red"
+    },
+    {
+      "japanese": "こくてつ",
+      "chinese": "国铁",
+      "review_count": 4,
+      "error_count": 1,
+      "consecutive_correct": 3,
+      "last_review": "06/29",
+      "status": "yellow"
+    },
+    {
+      "japanese": "してつ",
+      "chinese": "私铁",
+      "review_count": 4,
+      "error_count": 1,
+      "consecutive_correct": 3,
+      "last_review": "06/29",
+      "status": "yellow"
+    },
+    {
+      "japanese": "き",
+      "chinese": "树",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "ジェーアール",
+      "chinese": "JR铁路",
+      "review_count": 6,
+      "error_count": 3,
+      "consecutive_correct": 3,
+      "last_review": "07/01",
+      "status": "red"
+    },
+    {
+      "japanese": "ヨガ",
+      "chinese": "瑜伽",
+      "review_count": 4,
+      "error_count": 0,
+      "consecutive_correct": 4,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "らいしゅう",
+      "chinese": "下周",
+      "review_count": 4,
+      "error_count": 1,
+      "consecutive_correct": 3,
+      "last_review": "06/29",
+      "status": "yellow"
+    },
+    {
+      "japanese": "あした",
+      "chinese": "明天",
+      "review_count": 4,
+      "error_count": 1,
+      "consecutive_correct": 3,
+      "last_review": "06/29",
+      "status": "yellow"
+    },
+    {
+      "japanese": "かいます",
+      "chinese": "买",
+      "review_count": 4,
+      "error_count": 1,
+      "consecutive_correct": 3,
+      "last_review": "06/29",
+      "status": "yellow"
+    },
+    {
+      "japanese": "まいしゅう",
+      "chinese": "每周",
+      "review_count": 4,
+      "error_count": 1,
+      "consecutive_correct": 3,
+      "last_review": "06/29",
+      "status": "yellow"
+    },
+    {
+      "japanese": "ごろ",
+      "chinese": "左右(时间)",
+      "review_count": 6,
+      "error_count": 2,
+      "consecutive_correct": 2,
+      "last_review": "07/02",
+      "status": "red"
+    },
+    {
+      "japanese": "バレーボール",
+      "chinese": "排球",
+      "review_count": 6,
+      "error_count": 2,
+      "consecutive_correct": 3,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "つくります",
+      "chinese": "做/制作",
+      "review_count": 4,
+      "error_count": 1,
+      "consecutive_correct": 3,
+      "last_review": "06/29",
+      "status": "yellow"
+    },
+    {
+      "japanese": "ゲーム",
+      "chinese": "游戏",
+      "review_count": 5,
+      "error_count": 2,
+      "consecutive_correct": 3,
+      "last_review": "06/29",
+      "status": "red"
+    },
+    {
+      "japanese": "からて",
+      "chinese": "空手道",
+      "review_count": 4,
+      "error_count": 1,
+      "consecutive_correct": 3,
+      "last_review": "06/29",
+      "status": "yellow"
+    },
+    {
+      "japanese": "シャワー",
+      "chinese": "淋浴(名)",
+      "review_count": 6,
+      "error_count": 3,
+      "consecutive_correct": 1,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "あびます",
+      "chinese": "冲澡/淋浴(动)",
+      "review_count": 3,
+      "error_count": 0,
+      "consecutive_correct": 3,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "メール",
+      "chinese": "邮件",
+      "review_count": 3,
+      "error_count": 0,
+      "consecutive_correct": 3,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "ねます",
+      "chinese": "睡觉",
+      "review_count": 3,
+      "error_count": 0,
+      "consecutive_correct": 3,
+      "last_review": "07/01",
+      "status": "yellow"
+    },
+    {
+      "japanese": "でかけます",
+      "chinese": "外出/出门",
+      "review_count": 7,
+      "error_count": 5,
+      "consecutive_correct": 1,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "はしります",
+      "chinese": "跑步",
+      "review_count": 6,
+      "error_count": 5,
+      "consecutive_correct": 0,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "およぎます",
+      "chinese": "游泳",
+      "review_count": 4,
+      "error_count": 2,
+      "consecutive_correct": 2,
+      "last_review": "07/02",
+      "status": "red"
+    },
+    {
+      "japanese": "せんしゅう",
+      "chinese": "上周",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/02",
+      "status": "yellow"
+    },
+    {
+      "japanese": "きのう",
+      "chinese": "昨天",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/02",
+      "status": "yellow"
+    },
+    {
+      "japanese": "あさって",
+      "chinese": "后天",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/02",
+      "status": "yellow"
+    },
+    {
+      "japanese": "おととい",
+      "chinese": "前天",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/02",
+      "status": "yellow"
+    },
+    {
+      "japanese": "まいにち",
+      "chinese": "每天",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/02",
+      "status": "yellow"
+    },
+    {
+      "japanese": "ごぜん",
+      "chinese": "上午",
+      "review_count": 3,
+      "error_count": 1,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "ごご",
+      "chinese": "下午",
+      "review_count": 3,
+      "error_count": 1,
+      "consecutive_correct": 1,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "にちようび",
+      "chinese": "星期日",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/02",
+      "status": "yellow"
+    },
+    {
+      "japanese": "げつようび",
+      "chinese": "星期一",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/02",
+      "status": "yellow"
+    },
+    {
+      "japanese": "かようび",
+      "chinese": "星期二",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/02",
+      "status": "yellow"
+    },
+    {
+      "japanese": "きんようび",
+      "chinese": "星期五",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/02",
+      "status": "yellow"
+    },
+    {
+      "japanese": "どようび",
+      "chinese": "星期六",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/02",
+      "status": "yellow"
+    },
+    {
+      "japanese": "けさ",
+      "chinese": "今天早晨",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/02",
+      "status": "yellow"
+    },
+    {
+      "japanese": "こんばん",
+      "chinese": "今天晚上",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/02",
+      "status": "yellow"
+    },
+    {
+      "japanese": "らいねん",
+      "chinese": "明年",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/02",
+      "status": "yellow"
+    },
+    {
+      "japanese": "きょねん",
+      "chinese": "去年",
+      "review_count": 3,
+      "error_count": 1,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "よる",
+      "chinese": "晚上",
+      "review_count": 4,
+      "error_count": 2,
+      "consecutive_correct": 1,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "しごと",
+      "chinese": "工作(名)",
+      "review_count": 1,
+      "error_count": 1,
+      "consecutive_correct": 0,
+      "last_review": "06/30",
+      "status": "red"
+    },
+    {
+      "japanese": "ちこく",
+      "chinese": "迟到",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "pending"
+    },
+    {
+      "japanese": "しゅっちょう",
+      "chinese": "出差",
+      "review_count": 3,
+      "error_count": 2,
+      "consecutive_correct": 0,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "けんしゅう",
+      "chinese": "进修",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "yellow"
+    },
+    {
+      "japanese": "りょこう",
+      "chinese": "旅行",
+      "review_count": 3,
+      "error_count": 1,
+      "consecutive_correct": 2,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "てんらんかい",
+      "chinese": "展览会",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "yellow"
+    },
+    {
+      "japanese": "パーティー",
+      "chinese": "联欢会",
+      "review_count": 3,
+      "error_count": 2,
+      "consecutive_correct": 0,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "おたく",
+      "chinese": "府上",
+      "review_count": 4,
+      "error_count": 3,
+      "consecutive_correct": 1,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "いつ",
+      "chinese": "什么时候",
+      "review_count": 3,
+      "error_count": 1,
+      "consecutive_correct": 1,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "やすみます",
+      "chinese": "休息(动)",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "yellow"
+    },
+    {
+      "japanese": "はたらきます",
+      "chinese": "工作(动)",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "yellow"
+    },
+    {
+      "japanese": "はじまります",
+      "chinese": "开始",
+      "review_count": 3,
+      "error_count": 1,
+      "consecutive_correct": 1,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "おわります",
+      "chinese": "结束",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "yellow"
+    },
+    {
+      "japanese": "べんきょうします",
+      "chinese": "学习",
+      "review_count": 4,
+      "error_count": 4,
+      "consecutive_correct": 0,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "ぺキンししゃ",
+      "chinese": "北京分社",
+      "review_count": 3,
+      "error_count": 1,
+      "consecutive_correct": 2,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "こうべ",
+      "chinese": "神户",
+      "review_count": 3,
+      "error_count": 1,
+      "consecutive_correct": 1,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "おはよう",
+      "chinese": "你早",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "yellow"
+    },
+    {
+      "japanese": "でんしゃ",
+      "chinese": "电车",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "yellow"
+    },
+    {
+      "japanese": "いきます",
+      "chinese": "去/前往",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "yellow"
+    },
+    {
+      "japanese": "きます",
+      "chinese": "来",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "yellow"
+    },
+    {
+      "japanese": "しぶや",
+      "chinese": "涩谷",
+      "review_count": 3,
+      "error_count": 1,
+      "consecutive_correct": 2,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "あきはばら",
+      "chinese": "秋叶原",
+      "review_count": 3,
+      "error_count": 2,
+      "consecutive_correct": 1,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "つぎ",
+      "chinese": "下一个",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "yellow"
+    },
+    {
+      "japanese": "うえのこうえん",
+      "chinese": "上野公园",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "yellow"
+    },
+    {
+      "japanese": "もうすぐ",
+      "chinese": "马上/快要",
+      "review_count": 4,
+      "error_count": 3,
+      "consecutive_correct": 1,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "あさくさ",
+      "chinese": "浅草",
+      "review_count": 3,
+      "error_count": 2,
+      "consecutive_correct": 1,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "ぐらい",
+      "chinese": "大约",
+      "review_count": 4,
+      "error_count": 3,
+      "consecutive_correct": 1,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "どのぐらい",
+      "chinese": "多久/多少",
+      "review_count": 3,
+      "error_count": 2,
+      "consecutive_correct": 1,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "かかります",
+      "chinese": "花费(时间/金钱)",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "yellow"
+    },
+    {
+      "japanese": "おとといのあさ",
+      "chinese": "前天早晨",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "yellow"
+    },
+    {
+      "japanese": "きのうのあさ",
+      "chinese": "昨天早晨",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "yellow"
+    },
+    {
+      "japanese": "あしたのあさ",
+      "chinese": "明天早晨",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "yellow"
+    },
+    {
+      "japanese": "あさってのあさ",
+      "chinese": "后天早晨",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "yellow"
+    },
+    {
+      "japanese": "おとといのばん",
+      "chinese": "前天晚上",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "yellow"
+    },
+    {
+      "japanese": "ゆうべ",
+      "chinese": "昨天晚上",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "yellow"
+    },
+    {
+      "japanese": "あしたのばん",
+      "chinese": "明天晚上",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "yellow"
+    },
+    {
+      "japanese": "あさってのばん",
+      "chinese": "后天晚上",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "yellow"
+    },
+    {
+      "japanese": "せんせんしゅう",
+      "chinese": "上上周",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "yellow"
+    },
+    {
+      "japanese": "せんげつ",
+      "chinese": "上个月",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "yellow"
+    },
+    {
+      "japanese": "こんげつ",
+      "chinese": "这个月",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "yellow"
+    },
+    {
+      "japanese": "らいげつ",
+      "chinese": "下个月",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "yellow"
+    },
+    {
+      "japanese": "さらいげつ",
+      "chinese": "下下个月",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "yellow"
+    },
+    {
+      "japanese": "まいつき",
+      "chinese": "每个月",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "yellow"
+    },
+    {
+      "japanese": "ことし",
+      "chinese": "今年",
+      "review_count": 3,
+      "error_count": 1,
+      "consecutive_correct": 2,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "さらいねん",
+      "chinese": "后年",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "yellow"
+    },
+    {
+      "japanese": "まいとし",
+      "chinese": "每年",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "yellow"
+    },
+    {
+      "japanese": "よなか",
+      "chinese": "半夜",
+      "review_count": 2,
+      "error_count": 1,
+      "consecutive_correct": 0,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "なつやすみ",
+      "chinese": "暑假",
+      "review_count": 2,
+      "error_count": 1,
+      "consecutive_correct": 1,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "たんじょうび",
+      "chinese": "生日",
+      "review_count": 3,
+      "error_count": 3,
+      "consecutive_correct": 0,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "こどものひ",
+      "chinese": "儿童节",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "こうつうきかん",
+      "chinese": "交通工具",
+      "review_count": 2,
+      "error_count": 1,
+      "consecutive_correct": 1,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "しんかんせん",
+      "chinese": "新干线",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "ひこうき",
+      "chinese": "飞机",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "バス",
+      "chinese": "公共汽车",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "タクシー",
+      "chinese": "出租车",
+      "review_count": 2,
+      "error_count": 1,
+      "consecutive_correct": 1,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "フェリー",
+      "chinese": "渡轮",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "アパート",
+      "chinese": "公寓",
+      "review_count": 2,
+      "error_count": 1,
+      "consecutive_correct": 1,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "うち",
+      "chinese": "家",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "プール",
+      "chinese": "游泳池",
+      "review_count": 2,
+      "error_count": 1,
+      "consecutive_correct": 0,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "さとう",
+      "chinese": "佐藤",
+      "review_count": 2,
+      "error_count": 1,
+      "consecutive_correct": 1,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "フランス",
+      "chinese": "法国",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "ひろしま",
+      "chinese": "广岛",
+      "review_count": 2,
+      "error_count": 1,
+      "consecutive_correct": 1,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "きょうと",
+      "chinese": "京都",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "ほっかいどう",
+      "chinese": "北海道",
+      "review_count": 3,
+      "error_count": 3,
+      "consecutive_correct": 0,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "はこね",
+      "chinese": "箱根",
+      "review_count": 3,
+      "error_count": 3,
+      "consecutive_correct": 0,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "ぎんざ",
+      "chinese": "银座",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "しんじゅく",
+      "chinese": "新宿",
+      "review_count": 2,
+      "error_count": 1,
+      "consecutive_correct": 1,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "かえります",
+      "chinese": "回去",
+      "review_count": 3,
+      "error_count": 2,
+      "consecutive_correct": 1,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "だけ",
+      "chinese": "仅仅/只有",
+      "review_count": 3,
+      "error_count": 3,
+      "consecutive_correct": 0,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "まっすぐ",
+      "chinese": "径直/笔直",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "いっしょに",
+      "chinese": "一起",
+      "review_count": 2,
+      "error_count": 1,
+      "consecutive_correct": 1,
+      "last_review": "07/03",
+      "status": "red"
+    },
+    {
+      "japanese": "のぞみ",
+      "chinese": "希望号(新干线)",
+      "review_count": 3,
+      "error_count": 3,
+      "consecutive_correct": 0,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "ひかり",
+      "chinese": "光号(新干线)",
+      "review_count": 3,
+      "error_count": 3,
+      "consecutive_correct": 0,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "こだま",
+      "chinese": "回声号(新干线)",
+      "review_count": 3,
+      "error_count": 3,
+      "consecutive_correct": 0,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "おつかれさま",
+      "chinese": "辛苦了",
+      "review_count": 2,
+      "error_count": 1,
+      "consecutive_correct": 0,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "たいへん",
+      "chinese": "辛苦/不得了",
+      "review_count": 3,
+      "error_count": 2,
+      "consecutive_correct": 1,
+      "last_review": "07/04",
+      "status": "red"
+    },
+    {
+      "japanese": "ぺキン",
+      "chinese": "北京(城市)",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/04",
+      "status": "yellow"
+    },
+    {
+      "japanese": "さらいしゅう",
+      "chinese": "下下周",
+      "review_count": 2,
+      "error_count": 0,
+      "consecutive_correct": 2,
+      "last_review": "07/03",
+      "status": "yellow"
+    },
+    {
+      "japanese": "こんしゅう",
+      "chinese": "这周",
+      "review_count": 3,
+      "error_count": 0,
+      "consecutive_correct": 3,
+      "last_review": "06/30",
+      "status": "yellow"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "S01",
+      "chinese": "我是中国人",
+      "japanese": "私は中国人です",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    },
+    {
+      "id": "S02",
+      "chinese": "森先生不是学生",
+      "japanese": "森さんは学生ではありません",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    },
+    {
+      "id": "S03",
+      "chinese": "林先生是日本人吗",
+      "japanese": "林さんは日本人ですか",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    },
+    {
+      "id": "S04",
+      "chinese": "小李是日中企划的职员",
+      "japanese": "李さんは日中企画の社員です",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    },
+    {
+      "id": "S05",
+      "chinese": "我不是吉田",
+      "japanese": "私は吉田じゃありません",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    },
+    {
+      "id": "S06",
+      "chinese": "这是书",
+      "japanese": "これは本です",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    },
+    {
+      "id": "S07",
+      "chinese": "那是杂志吗",
+      "japanese": "それは雑誌ですか",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    },
+    {
+      "id": "S08",
+      "chinese": "这个相机是史密斯先生的",
+      "japanese": "このカメラはスミスさんのです",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    },
+    {
+      "id": "S09",
+      "chinese": "这位是谁",
+      "japanese": "この方はどなたですか",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    },
+    {
+      "id": "S10",
+      "chinese": "哪个是你的自行车",
+      "japanese": "どの自転車があなたのですか",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    },
+    {
+      "id": "S11",
+      "chinese": "食堂在哪里",
+      "japanese": "食堂はどこですか",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    },
+    {
+      "id": "S12",
+      "chinese": "厕所在那里",
+      "japanese": "トイレはあそこです",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    },
+    {
+      "id": "S13",
+      "chinese": "这个多少钱",
+      "japanese": "これはいくらですか",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    },
+    {
+      "id": "S14",
+      "chinese": "那里也是日中企划的大楼",
+      "japanese": "あそこも日中企画のビルです",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    },
+    {
+      "id": "S15",
+      "chinese": "东京的地图在哪里",
+      "japanese": "東京の地図はどこですか",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    },
+    {
+      "id": "S16",
+      "chinese": "房间里有桌子和椅子",
+      "japanese": "部屋に机といすがあります",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    },
+    {
+      "id": "S17",
+      "chinese": "公园里有孩子和狗",
+      "japanese": "公園に子どもと犬がいます",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    },
+    {
+      "id": "S18",
+      "chinese": "猫在桌子下面",
+      "japanese": "猫は机の下です",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    },
+    {
+      "id": "S19",
+      "chinese": "冰箱里什么也没有",
+      "japanese": "冷蔵庫に何もありません",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    },
+    {
+      "id": "S20",
+      "chinese": "车站前面有便利店",
+      "japanese": "駅の前にコンビニがあります",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    },
+    {
+      "id": "S21",
+      "chinese": "教室里谁也没有",
+      "japanese": "教室に誰もいません",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    },
+    {
+      "id": "S22",
+      "chinese": "森先生7点起床",
+      "japanese": "森さんは7時に起きます",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    },
+    {
+      "id": "S23",
+      "chinese": "我昨天没有工作",
+      "japanese": "わたしは昨日働きませんでした",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    },
+    {
+      "id": "S24",
+      "chinese": "学校8点半开始",
+      "japanese": "学校は8時半に始まります",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    },
+    {
+      "id": "S25",
+      "chinese": "我从9点工作到5点",
+      "japanese": "わたしは9時から5時まで働きます",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    },
+    {
+      "id": "S26",
+      "chinese": "昨天12点半左右睡的",
+      "japanese": "昨日12時半ごろ寝ました",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    },
+    {
+      "id": "S27",
+      "chinese": "展览会什么时候开始",
+      "japanese": "展覧会はいつ始まりますか",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    },
+    {
+      "id": "S28",
+      "chinese": "明天去学校",
+      "japanese": "明日学校へ行きます",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    },
+    {
+      "id": "S29",
+      "chinese": "坐电车去公司",
+      "japanese": "電車で会社へ行きます",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    },
+    {
+      "id": "S30",
+      "chinese": "和朋友一起去京都",
+      "japanese": "友達と一緒に京都へ行きます",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    },
+    {
+      "id": "S31",
+      "chinese": "从东京坐新干线去广岛",
+      "japanese": "東京から広島まで新幹線で行きます",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    },
+    {
+      "id": "S32",
+      "chinese": "每天读杂志",
+      "japanese": "毎日雑誌を読みます",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    },
+    {
+      "id": "S33",
+      "chinese": "星期日休息",
+      "japanese": "日曜日休みます",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    },
+    {
+      "id": "S34",
+      "chinese": "怎么去车站",
+      "japanese": "何で駅へ行きますか",
+      "review_count": 0,
+      "error_count": 0,
+      "consecutive_correct": 0,
+      "last_review": "",
+      "status": "yellow"
+    }
+  ],
+  "updated": "2026-07-04"
+}

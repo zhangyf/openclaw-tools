@@ -1,0 +1,32 @@
+{
+  "progress_file": "/home/zhangyufeng/.openclaw/workspace/skills/japanese-review/data/progress.json",
+  "output_dir": "/home/zhangyufeng/.openclaw/workspace/skills/japanese-review/data/review",
+  "notes_dir": "/home/zhangyufeng/.openclaw/workspace/skills/japanese-review/references",
+
+  "cos": {
+    "enabled": true,
+    "bucket_url": "https://openclaw-backup-tx-1251036673.cos.ap-beijing.myqcloud.com",
+    "region": "ap-beijing",
+    "progress_path": "japanese/progress.json",
+    "review_fmt": "japanese/review/日语复习_%s.xlsx"
+  },
+
+  "ebbinghaus": {
+    "0": 1,
+    "1": 2,
+    "2": 4,
+    "3": 7,
+    "4": 15,
+    "5": 30
+  },
+
+  "green": {
+    "max_before_sample": 10,
+    "sample_fraction": 3,
+    "min_sample": 5
+  },
+
+  "sentences": {
+    "daily_count": 12
+  }
+}

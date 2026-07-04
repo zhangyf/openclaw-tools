@@ -22,8 +22,13 @@ tasks/
 
 # 忽略技能目录（可能包含敏感信息）
 skills/
+!skills/japanese-review/
+!skills/japanese-review/
+!.openclaw/workspace/skills/japanese-review/
 !.openclaw/workspace/skills/openclaw-tavily-search/
+!.openclaw/workspace/skills/japanese-review/
 !.openclaw/workspace/skills/weekly-client-updates/
+!.openclaw/workspace/skills/japanese-review/
 
 # 忽略环境变量文件
 .env
@@ -58,4 +63,4 @@ go/bin/
 !README.md
 !DEPLOYMENT.md
 !briefings/war-briefing-detailed-*.md  # 允许战争简报文件
-!briefings/test-*.md                   # 允许测试文件
+!briefings/test-*.md                   # 允许测试文件!skills/japanese-review/
