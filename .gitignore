@@ -66,3 +66,4 @@ go/bin/
 !briefings/test-*.md                   # 允许测试文件
 !skills/japanese-review/
 skills/japanese-review/references/
+skills/japanese-review/data/progress.json
